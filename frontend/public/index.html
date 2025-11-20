@@ -2,351 +2,176 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Coimbatore Food Recommender</title>
+  <title>Coimbatore Food & Restaurant Recommender</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,800|Poppins:700,800&display=swap" rel="stylesheet">
-<style>
-    body {
-      font-family: 'Inter', Arial, sans-serif;
-      background: #14171c;
-      color: #e3eaf7;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 980px;
-      margin: 44px auto 0 auto;
-      background: #232733;
-      border-radius: 18px;
-      box-shadow: 0 6px 32px #0005;
-      display: flex;
-      overflow: hidden;
-    }
-    .sidebar {
-      background: #1a1d28;
-      width: 290px;
-      padding: 32px 18px;
-      min-height: 620px;
-      border-right: 1.5px solid #292a37;
-    }
-    .main {
-      flex: 1;
-      padding: 30px 36px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      min-height: 620px;
-    }
-    .logo {
-      font-family:'Poppins';font-weight:800;font-size:2em;margin-bottom:40px;color:#ffe066;text-align:left;letter-spacing:1px;}
-    .input, input, select {
-      background: #25304a;
-      color: #e3eaf7;
-      padding: 10px 15px;
-      border-radius: 5px;
-      border: none;
-      font-size: 1em;
-      margin:8px 0;
-      width: 100%;
-      box-sizing: border-box;
-      outline: none;
-      transition: box-shadow .2s;
-    }
-    .input:focus, input:focus {
-      box-shadow:0 0 0 2px #7fd1b9;
-    }
-    .btn {
-      background: #44bb6d;
-      color: #fff;
-      border: none;
-      padding: 10px 22px;
-      border-radius: 5px;
-      font-weight: 600;
-      cursor: pointer;
-      margin-top: 8px;
-      font-size: 1em;
-      transition: background .18s, box-shadow .21s;
-      box-shadow: 0 2px 6px #25252230;
-    }
-    .btn:hover{
-      background:#119e4b;
-      box-shadow:0 2px 10px #44bb6d33;
-    }
-    .chatbox {
-      background:#222b35;
-      border-radius:15px;
-      padding:28px 18px 28px 22px;
-      min-height:420px;
-      margin-bottom:16px;
-      overflow-y:auto;
-      max-height:58vh;
-      box-shadow:0 2px 20px #0002;
-      font-size:1.07em;
-    }
-    .message.user {
-      text-align: right;
-      color: #7fd1b9;
-      margin-bottom: 12px;
-      font-weight: 500;
-      padding:6px 18px;
-      background: #19323c;
-      border-radius: 12px 12px 3px 16px;
-      display:inline-block;max-width:80%;float:right;clear:both;
-    }
-    .message.bot {
-      text-align: left;
-      color: #e8b260;
-      background: #25304a;
-      margin-bottom: 12px;
-      border-radius: 12px 12px 16px 3px;
-      display:inline-block;max-width:80%;float:left;clear:both;
-      font-weight: 500;
-      padding:8px 18px;
-    }
-    .chat-input-row {
-      display: flex; gap:12px;
-    }
-    .chat-input {
-      flex:1;
-      padding: 12px;
-      font-size: 1.1em;
-      border-radius: 7px;
-      border: none;
-      background: #293046;
-      color: #fff;
-      outline:none;
-    }
-    .send-btn {
-      background: #ffe066;
-      color: #222b35;
-      border:none;
-      font-weight:bold;
-      border-radius:7px;
-      padding:0 22px;
-      cursor:pointer;
-      font-size:1.1em;
-      transition:background .18s;
-    }
-    .send-btn:hover {
-      background:#ffe57f;
-      box-shadow:0 2px 10px #ffe06633;
-    }
-    .sidebar-section {margin-bottom:38px;}
-    h3,h4 {margin-top:0;}
-    h3 {color:#44bb6d;}
-    h4 {color:#6fc1ff;}
-    .footer { text-align:center; margin:22px 0; color:#888;font-size:1.12em;}
-    #feedbackRow {margin-top: 16px; text-align:center;}
-    .feedback-btn {background:#33dd99;color:#1a1d28;border:none;border-radius:6px;padding:8px 18px;margin-right:8px;cursor:pointer;font-size:1em;font-weight:600;}
-    .feedback-btn:hover {background:#22b981;}
-    #feedbackComment {margin-top:8px;border-radius:7px;padding:8px;width:90%;border:none;background:#232b39;color:#e7faef;}
-    #feedbackMsg {color:#7fd1b9;margin-top:10px;}
-    @media(max-width:850px){
-      .container{flex-direction:column;}
-      .sidebar{width:100%;min-height:120px;border-right:none;}
-      .main{padding:20px 10px;}
-    }
+  <style>
+    body {font-family:Arial, sans-serif; background:#12171f; color:#f2f5f9; margin:0;}
+    .container {max-width:1100px; margin:24px auto; display:flex; gap:24px; flex-wrap:wrap;}
+    .panel {background:#1d2530; padding:18px 22px; border-radius:12px; flex:1; min-width:320px;}
+    .chat-panel {flex:2; display:flex; flex-direction:column;}
+    h2 {margin-top:0;}
+    input,button,textarea {border:none; outline:none; border-radius:6px; padding:10px; font-size:14px;}
+    input,textarea {background:#2a3342; color:#fff; width:100%; margin-bottom:10px;}
+    button {background:#4fb070; color:#fff; cursor:pointer; font-weight:600;}
+    button:hover {background:#3d945a;}
+    #chatBox {background:#182029; flex:1; padding:16px; border-radius:10px; overflow-y:auto; min-height:420px;}
+    .msg {margin:10px 0; line-height:1.4;}
+    .user {color:#7fd1b9; text-align:right;}
+    .bot {color:#e6c273; text-align:left;}
+    .feedback-row {margin-top:10px;}
+    .small {font-size:12px; color:#8899aa; margin-top:4px;}
   </style>
 </head>
 <body>
 <div class="container">
-  <div class="sidebar">
-    <div class="logo">🍴 Tasty Coimbatore</div>
-    <div class="sidebar-section">
-      <div class="login-ctrls" id="loginSection">
-        <h4>Login / Signup</h4>
-        <input id="loginUser" placeholder="Email" type="email"/>
-        <input id="loginPass" placeholder="Password" type="password"/>
-        <button class="btn" id="loginBtn">Login</button>
-        <button class="btn" id="signupBtn">Signup</button>
-        <div id="loginMsg" style="margin-top:8px;color:#ea8c93;"></div>
-      </div>
-      <div class="profile-ctrls" style="display:none;" id="profileSection">
-        <h4>Welcome, <span id="profileName"></span></h4>
-        <button class="btn" id="logoutBtn">Logout</button>
-      </div>
+  <div class="panel" style="max-width:340px">
+    <h2>Account</h2>
+    <div id="authBox">
+      <input id="email" placeholder="Email"/>
+      <input id="pwd" type="password" placeholder="Password"/>
+      <button onclick="signup()">Signup</button>
+      <button onclick="login()">Login</button>
+      <div id="authMsg" class="small"></div>
     </div>
-    <div class="sidebar-section">
-      <h4>Trending Foods</h4>
-      <div id="trendingFoods">Loading...</div>
+    <div id="profileBox" style="display:none;">
+      <div>Logged in as <span id="userId"></span></div>
+      <button onclick="logout()">Logout</button>
     </div>
-    <div class="sidebar-section">
-      <h4>Analytics</h4>
-      <div id="analytics">Loading stats...</div>
-    </div>
-    <div class="sidebar-section">
-      <h4>Suggest to Community</h4>
-      <input id="suggestInput" placeholder="Suggest dish/restaurant"/>
-      <button class="btn" id="suggestBtn">Submit</button>
-      <div id="suggestMsg"></div>
-    </div>
+    <hr>
+    <h3>Trending Foods</h3>
+    <div id="trending">Loading...</div>
+    <h3 style="margin-top:18px;">Feedback Analytics</h3>
+    <div id="analytics">Loading...</div>
+    <h3 style="margin-top:18px;">Suggest to Community</h3>
+    <input id="suggestInput" placeholder="Suggest dish or restaurant"/>
+    <button onclick="suggest()">Submit</button>
+    <div id="suggestMsg" class="small"></div>
   </div>
-  <div class="main">
-    <div class="chatbox" id="chatBox"></div>
-    <div class="chat-input-row">
-      <input type="text" class="chat-input" id="chatInput" placeholder="Type a message..."/>
-      <button class="send-btn" id="sendChatBtn">Send</button>
+
+  <div class="panel chat-panel">
+    <h2>Chat & Recommendations</h2>
+    <div id="chatBox"></div>
+    <div style="display:flex; gap:10px; margin-top:10px;">
+      <input id="chatInput" placeholder="Type your message..."/>
+      <button onclick="sendChat()">Send</button>
     </div>
-    <div id="feedbackRow" style="display:none;">
+    <div id="feedbackRow" class="feedback-row" style="display:none;">
       <span>Did you like this recommendation?</span>
-      <button class="feedback-btn" id="feedbackYes">Yes</button>
-      <button class="feedback-btn" id="feedbackNo">No</button>
-      <input type="text" id="feedbackComment" placeholder="Any comments? (optional)" style="display:none;">
-      <div id="feedbackMsg"></div>
+      <button onclick="sendFeedback('like')">Yes</button>
+      <button onclick="enableDislike()">No</button>
+      <textarea id="fbComment" placeholder="What was wrong?" style="display:none;"></textarea>
+      <button id="fbSubmit" style="display:none;" onclick="submitDislike()">Submit</button>
+      <div id="fbMsg" class="small"></div>
     </div>
   </div>
 </div>
-<div class="footer">Made with 🍲 & ❤️ by Team Coimbatore — Powered by Flask, Qdrant, Neo4j, MongoDB, GeminiAI</div>
 <script>
-let currentUser = null;
-let token = null;
-let lastFoodId = null;
-let lastRestaurantId = null;
-let lastRecommendation = null;
+let token=null, currentUser=null;
+let lastFoodId=null, lastRestaurantId=null;
 
-function showMessage(role, text) {
-  let box = document.getElementById("chatBox");
-  let div = document.createElement("div");
-  div.className = "message " + role;
-  div.innerText = text;
+function api(path, method='GET', body=null){
+  return fetch("http://localhost:8000"+path,{
+    method,
+    headers:{
+      "Content-Type":"application/json",
+      ...(token?{"Authorization":"Bearer "+token}:{})
+    },
+    body: body?JSON.stringify(body):null
+  }).then(r=>r.json());
+}
+
+function signup(){
+  let email=document.getElementById('email').value.trim();
+  let pwd=document.getElementById('pwd').value.trim();
+  api("/api/signup","POST",{email,password:pwd}).then(d=>{
+    document.getElementById('authMsg').innerText=d.success?"Signup ok. Login now.":(d.message||"Failed");
+  });
+}
+function login(){
+  let email=document.getElementById('email').value.trim();
+  let pwd=document.getElementById('pwd').value.trim();
+  api("/api/login","POST",{email,password:pwd}).then(d=>{
+    if(d.success){
+      token=d.token;currentUser=d.user_id;
+      document.getElementById('userId').innerText=currentUser;
+      document.getElementById('authBox').style.display='none';
+      document.getElementById('profileBox').style.display='block';
+      addMsg('bot',"Welcome! Ask for a dish or preference.");
+      loadAnalytics();
+    } else {
+      document.getElementById('authMsg').innerText=d.message||"Login failed";
+    }
+  });
+}
+function logout(){
+  token=null;currentUser=null;
+  document.getElementById('authBox').style.display='block';
+  document.getElementById('profileBox').style.display='none';
+  document.getElementById('chatBox').innerHTML='';
+  addMsg('bot',"Logged out.");
+}
+function addMsg(role,text){
+  let box=document.getElementById('chatBox');
+  let div=document.createElement('div');
+  div.className='msg '+role;
+  div.innerText=text;
   box.appendChild(div);
-  box.scrollTop = box.scrollHeight;
+  box.scrollTop=box.scrollHeight;
 }
-function resetMessages() {
-  let box = document.getElementById("chatBox"); box.innerHTML = "";
+function sendChat(){
+  let txt=document.getElementById('chatInput').value.trim();
+  if(!txt){return;}
+  if(!currentUser){addMsg('bot','Please login first.');return;}
+  addMsg('user',txt);
+  document.getElementById('chatInput').value='';
+  api("/api/chat","POST",{user_id:currentUser,session_id:currentUser+"_session",message:txt}).then(d=>{
+    addMsg('bot',d.reply||"No reply.");
+    if(d.request_feedback){
+      lastFoodId=d.food_id;
+      lastRestaurantId=d.restaurant_id;
+      document.getElementById('feedbackRow').style.display='block';
+      document.getElementById('fbComment').style.display='none';
+      document.getElementById('fbSubmit').style.display='none';
+      document.getElementById('fbMsg').innerText='';
+    } else {
+      document.getElementById('feedbackRow').style.display='none';
+    }
+  });
 }
-
-document.getElementById("sendChatBtn").onclick = async () => {
-  let msg = document.getElementById("chatInput").value;
-  if (!msg || !currentUser) {showMessage("bot", "Please login first!");return;}
-  showMessage("user", msg); document.getElementById("chatInput").value = "";
-  fetch("http://localhost:8000/api/chat", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({user_id: currentUser, session_id: currentUser + "_session", message: msg})
-  }).then(r=>r.json()).then(data=>{
-    showMessage("bot", data.reply || "🤖No response yet.");
-    // Extract and sync feedback prompt context
-    if (data.request_feedback) {
-      document.getElementById("feedbackRow").style.display = "block";
-      document.getElementById("feedbackMsg").innerText = "";
-      document.getElementById("feedbackComment").style.display = "none";
-      lastFoodId = (typeof data.food_id !== "undefined") ? data.food_id : null;
-      lastRestaurantId = (typeof data.restaurant_id !== "undefined") ? data.restaurant_id : null;
-      lastRecommendation = data.reply || "";
-    } else {
-      document.getElementById("feedbackRow").style.display = "none";
-      lastFoodId = null;
-      lastRestaurantId = null;
-      lastRecommendation = null;
-    }
+function sendFeedback(action){
+  api("/api/feedback","POST",{user_id:currentUser,action,food_id:lastFoodId,restaurant_id:lastRestaurantId}).then(()=>{
+    document.getElementById('fbMsg').innerText="Thanks for your feedback!";
+    document.getElementById('feedbackRow').style.display='none';
   });
-};
-
-document.getElementById("loginBtn").onclick = async () => {
-  let user = document.getElementById("loginUser").value.trim();
-  let pass = document.getElementById("loginPass").value.trim();
-  fetch("http://localhost:8000/api/login", {
-    method:"POST",headers:{"Content-Type":"application/json"},
-    body: JSON.stringify({email: user, password: pass})
-  }).then(r=>r.json()).then(dat=>{
-    if(dat.success) {
-      currentUser = dat.user_id; token = dat.token;
-      document.getElementById("profileName").innerText = user;
-      document.getElementById("loginSection").style.display = "none";
-      document.getElementById("profileSection").style.display = "block";
-      resetMessages(); showMessage("bot","Welcome! Start chatting below.");
-    } else {
-      document.getElementById("loginMsg").innerText = "Login failed.";
-    }
+}
+function enableDislike(){
+  document.getElementById('fbComment').style.display='block';
+  document.getElementById('fbSubmit').style.display='inline-block';
+}
+function submitDislike(){
+  let comment=document.getElementById('fbComment').value.trim();
+  api("/api/feedback","POST",{user_id:currentUser,action:"dislike",comment,food_id:lastFoodId,restaurant_id:lastRestaurantId}).then(()=>{
+    document.getElementById('fbMsg').innerText="Appreciate your feedback!";
+    document.getElementById('feedbackRow').style.display='none';
   });
-};
-
-document.getElementById("signupBtn").onclick = async () => {
-  let user = document.getElementById("loginUser").value.trim();
-  let pass = document.getElementById("loginPass").value.trim();
-  fetch("http://localhost:8000/api/signup", {
-    method:"POST",headers:{"Content-Type":"application/json"},
-    body: JSON.stringify({email: user, password: pass})
-  }).then(r=>r.json()).then(dat=>{
-    if(dat.success) {document.getElementById("loginMsg").innerText = "Signup success. Login now!";}
-    else {document.getElementById("loginMsg").innerText = "Signup failed.";}
+}
+function suggest(){
+  let s=document.getElementById('suggestInput').value.trim();
+  if(!currentUser){document.getElementById('suggestMsg').innerText="Login first";return;}
+  if(!s){return;}
+  api("/api/community_suggest","POST",{user_id:currentUser,suggestion:s}).then(d=>{
+    document.getElementById('suggestMsg').innerText=d.success?"Submitted.":"Error.";
   });
-};
-
-document.getElementById("logoutBtn").onclick = () => {
-  currentUser = null; token = null;
-  document.getElementById("loginSection").style.display = "block";
-  document.getElementById("profileSection").style.display = "none";
-  resetMessages(); showMessage("bot","You are now logged out.");
-};
-
-document.getElementById("suggestBtn").onclick = async () => {
-  let txt = document.getElementById("suggestInput").value;
-  if(!txt||!currentUser) {document.getElementById("suggestMsg").innerText="Login and type something!";return;}
-  fetch("http://localhost:8000/api/community_suggest",{
-    method:"POST",headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({user_id:currentUser,suggestion:txt})
-  }).then(r=>r.json()).then(dat=>{
-    document.getElementById("suggestMsg").innerText = dat.success?"Suggestion sent!":"Error sending.";
+}
+function loadAnalytics(){
+  api("/api/analytics/trending").then(data=>{
+    document.getElementById('trending').innerHTML=(data||[]).map(f=>'<div>'+f.food_name+'</div>').join('')||'No data';
   });
-};
-
-// Feedback prompt logic with context:
-document.getElementById("feedbackYes").onclick = () => {
-  let comment = document.getElementById("feedbackComment").value.trim();
-  fetch("http://localhost:8000/api/feedback",{
-    method:"POST",headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({
-      user_id: currentUser,
-      action: "like",
-      comment: comment,
-      food_id: lastFoodId,
-      restaurant_id: lastRestaurantId
-    })
-  }).then(r=>r.json()).then(dat=>{
-    document.getElementById("feedbackMsg").innerText = "Thanks for your feedback!";
-    document.getElementById("feedbackRow").style.display="none";
-    document.getElementById("feedbackComment").value = "";
+  api("/api/feedback/analytics").then(d=>{
+    document.getElementById('analytics').innerHTML="👍 "+(d.like_total||0)+" | 👎 "+(d.dislike_total||0);
   });
-};
-
-document.getElementById("feedbackNo").onclick = () => {
-  document.getElementById("feedbackComment").style.display = "block";
-  document.getElementById("feedbackComment").focus();
-  document.getElementById("feedbackMsg").innerText="Please let us know what could be improved.";
-  document.getElementById("feedbackComment").onblur = ()=>{
-    let comment = document.getElementById("feedbackComment").value.trim();
-    if(comment){
-      fetch("http://localhost:8000/api/feedback",{
-        method:"POST",headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({
-          user_id: currentUser,
-          action: "dislike",
-          comment: comment,
-          food_id: lastFoodId,
-          restaurant_id: lastRestaurantId
-        })
-      }).then(r=>r.json()).then(dat=>{
-        document.getElementById("feedbackMsg").innerText = "Thanks for your feedback!";
-        document.getElementById("feedbackRow").style.display="none";
-        document.getElementById("feedbackComment").value = "";
-      });
-    }
-  };
-};
-
-window.onload = function(){
-  fetch("http://localhost:8000/api/trending_foods").then(r=>r.json()).then(dat=>{
-    document.getElementById("trendingFoods").innerHTML =
-      (dat && dat.length) ? dat.map(f=>`<div>${f.food_name}</div>`).join("") : "No data.";
-  });
-  fetch("http://localhost:8000/api/feedback_analytics").then(r=>r.json()).then(dat=>{
-    document.getElementById("analytics").innerHTML =
-      "👍 " + (dat.like_total||0) + " | 👎 " + (dat.dislike_total||0) +
-      (dat.top_food && dat.top_food.food_name ? ("<br>Top: " + dat.top_food.food_name) : "");
-  });
-};
+}
+window.onload=loadAnalytics;
 </script>
 </body>
 </html>

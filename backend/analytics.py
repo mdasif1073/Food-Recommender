@@ -1,80 +1,51 @@
-from config import mongo_db
-from recommender import get_trending_foods
 import datetime
+from config import mongo_db
+from recommender import _trending_foods
 
-
-# --- User Count ---
 def user_count():
     return mongo_db.users.count_documents({})
 
+def trending_foods_dashboard(area=None, top_k=10):
+    foods = _trending_foods(area, k=top_k)
+    return [f.to_dict() for f in foods]
 
-# --- Trending Foods Dashboard Logic ---
-def trending_foods_dashboard(top_k=10, area=None):
-    trending = get_trending_foods(area=area, k=top_k)
-    return [f.to_dict() for f in trending]
-
-
-# --- Restaurant Hits/Leaderboard ---
-def restaurant_hit_leaderboard(top_k=10):
-    pop_map = mongo_db.food_popularity.aggregate([
-        {"$group": {"_id": "$food_id", "score": {"$sum": "$score"}}},
-        {"$sort": {"score": -1}}, {"$limit": top_k}
-    ])
-    rest_counts = {}
-    for rec in pop_map:
-        food_doc = mongo_db.foods.find_one({"food_id": rec["_id"]})
-        if food_doc and food_doc.get("restaurant_id"):
-            rid = food_doc["restaurant_id"]
-            rest_counts[rid] = rest_counts.get(rid, 0) + 1
-    results = []
-    for rid, cnt in rest_counts.items():
-        rdoc = mongo_db.restaurants.find_one({"restaurant_id": rid})
-        if rdoc:
-            results.append({"restaurant_id": rid, "restaurant_name": rdoc["restaurant_name"], "times_popular": cnt})
-    return sorted(results, key=lambda x: -x["times_popular"])[:top_k]
-
-
-# --- Analytics by Area/Zone ---
-def popular_in_area(area_name, top_k=5):
-    return trending_foods_dashboard(top_k=top_k, area=area_name)
-
-
-# --- Feedback Stats ---
 def feedback_analytics():
-    num_likes = mongo_db.interactions.count_documents({"action": "like"})
-    num_dislikes = mongo_db.interactions.count_documents({"action": "dislike"})
-    most_liked_food = mongo_db.food_popularity.find_one(sort=[("score", -1)])
+    likes = mongo_db.interactions.count_documents({"action": "like"})
+    dislikes = mongo_db.interactions.count_documents({"action": "dislike"})
+    top_food = mongo_db.food_popularity.find_one(sort=[("score", -1)])
     return {
-        "likes": num_likes,
-        "dislikes": num_dislikes,
-        "top_food": most_liked_food["food_id"] if most_liked_food else None
+        "likes": likes,
+        "dislikes": dislikes,
+        "top_food_id": top_food["food_id"] if top_food else None,
+        "top_food_score": top_food["score"] if top_food else None
     }
 
-
-# --- System Health/Ping ---
 def system_health():
+    status = {"time": datetime.datetime.utcnow().isoformat(), "mongo": False,
+              "neo4j": False, "qdrant": False, "status": "error"}
     try:
-        now = datetime.datetime.now().isoformat()
-        # Ping DB
-        mongo_ping = mongo_db.command('ping')
-        return {
-            "time": now,
-            "mongo": mongo_ping["ok"] == 1,
-            "status": "healthy"
-        }
-    except Exception as e:
-        return {"status": "error", "message": str(e)}
+        mongo_db.command("ping")
+        status["mongo"] = True
+    except Exception:
+        pass
+    try:
+        from config import neo4j_driver, qdrant
+        neo4j_driver.verify_connectivity()
+        status["neo4j"] = True
+        qdrant.get_collections()
+        status["qdrant"] = True
+    except Exception:
+        pass
+    if all([status["mongo"], status["neo4j"], status["qdrant"]]):
+        status["status"] = "healthy"
+    return status
 
+def recent_errors(limit=15):
+    return list(mongo_db.error_logs.find().sort("timestamp", -1).limit(limit))
 
-# --- Error Logs (for ops/dev, simple version) ---
-def log_error(source, message):
+def log_error(source: str, message: str):
     mongo_db.error_logs.insert_one({
         "source": source,
         "message": message,
-        "timestamp": datetime.datetime.now().isoformat()
+        "timestamp": datetime.datetime.utcnow().isoformat()
     })
-
-
-def recent_errors(n=10):
-    errors = list(mongo_db.error_logs.find().sort("timestamp", -1).limit(n))
-    return errors

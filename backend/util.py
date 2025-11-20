@@ -1,120 +1,79 @@
-import numpy as np
-from config import get_gemini_embedding, CONFIG, mongo_db
-import random
 import hashlib
 import jwt
 import datetime
+import logging
+import numpy as np
+from typing import List, Dict, Any
+from config import get_gemini_embedding, CONFIG, mongo_db, JWT_SECRET
 
+logger = logging.getLogger("util")
+_EMBED_CACHE: Dict[str, np.ndarray] = {}
 
-# --- Password Hash/Check ---
 def hash_password(password: str) -> str:
-    return hashlib.sha256(password.encode('utf-8')).hexdigest()
-
+    return hashlib.sha256(password.encode("utf-8")).hexdigest()
 
 def check_password(password: str, password_hash: str) -> bool:
     return hash_password(password) == password_hash
 
+def encode_auth_token(user_id: str, days_valid: int = 7) -> str:
+    payload = {
+        "exp": datetime.datetime.utcnow() + datetime.timedelta(days=days_valid),
+        "iat": datetime.datetime.utcnow(),
+        "sub": user_id
+    }
+    return jwt.encode(payload, JWT_SECRET, algorithm="HS256")
 
-# --- JWT Helper ---
-import secrets
-SECRET_KEY = secrets.token_hex(32)
-
-
-def encode_auth_token(user_id):
+def decode_auth_token(token: str) -> str | None:
     try:
-        payload = {
-            'exp': datetime.datetime.utcnow() + datetime.timedelta(days=3),
-            'iat': datetime.datetime.utcnow(),
-            'sub': user_id
-        }
-        return jwt.encode(payload, SECRET_KEY, algorithm='HS256')
-    except Exception as e:
+        payload = jwt.decode(token, JWT_SECRET, algorithms=["HS256"])
+        return payload["sub"]
+    except Exception:
         return None
 
-
-def decode_auth_token(token):
-    try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=['HS256'])
-        return payload['sub']
-    except jwt.ExpiredSignatureError:
-        return None
-    except jwt.InvalidTokenError:
-        return None
-
-
-# --- Embedding Helpers ---
 def embed_text_gemini(text: str) -> np.ndarray:
-    vec = get_gemini_embedding(text)
-    if vec is None:
-        return np.random.rand(CONFIG['food_vector_size'])
-    return np.array(vec)
+    if text in _EMBED_CACHE:
+        return _EMBED_CACHE[text]
+    emb_list = get_gemini_embedding(text)
+    vec = np.array(emb_list, dtype=np.float32)
+    _EMBED_CACHE[text] = vec
+    return vec
 
+def similarity(vec1, vec2) -> float:
+    v1 = np.array(vec1, dtype=np.float32)
+    v2 = np.array(vec2, dtype=np.float32)
+    n1, n2 = np.linalg.norm(v1), np.linalg.norm(v2)
+    if n1 == 0 or n2 == 0:
+        return 0.0
+    return float(np.dot(v1, v2) / (n1 * n2))
 
-def embed_batch_gemini(texts):
-    return np.array([embed_text_gemini(t) for t in texts])
-
-
-def similarity(vec1, vec2):
-    if isinstance(vec1, list): vec1 = np.array(vec1)
-    if isinstance(vec2, list): vec2 = np.array(vec2)
-    norm1 = np.linalg.norm(vec1)
-    norm2 = np.linalg.norm(vec2)
-    if norm1 == 0 or norm2 == 0: return 0.0
-    sim = np.dot(vec1, vec2) / (norm1 * norm2)
-    return float(sim)
-
-
-# --- Dialog/session helpers ---
 def clean_text(msg: str) -> str:
-    return msg.strip().replace("\n", " ").lower()
+    return msg.strip().lower()
 
-
-def user_session_id(user_id: str) -> str:
-    return f"{user_id}_{random.randint(1000,9999)}"
-
-
-# --- MongoDB batch helpers ---
-def mongo_batch_insert(collection, items, batch_size=64):
+def mongo_batch_insert(collection, items: List[Dict[str, Any]], batch_size=96):
     for i in range(0, len(items), batch_size):
-        subset = items[i:i+batch_size]
-        collection.insert_many(subset)
+        subset = items[i:i + batch_size]
+        if subset:
+            collection.insert_many(subset)
 
-
-# --- KG/Neo4j helpers ---
-def neo4j_safe_run(session, query, params=None):
-    try:
-        if params is None:
-            result = session.run(query)
-        else:
-            result = session.run(query, **params)
-        return result
-    except Exception as e:
-        print("Neo4j run error:", e)
-        return None
-
-
-# --- Explainability/Collaborative/Trending helpers ---
-def build_explanation(food, user, context):
+def build_explanation(food: Dict[str, Any], user, context: Dict[str, Any]) -> str:
     parts = []
-    if 'food_name' in food:
-        parts.append(f"{food['food_name']}")
-    if 'restaurant' in food and food.get('restaurant'):
-        parts.append(f"at {food['restaurant']}")
-    if 'category' in food and food.get('category'):
-        parts.append(f"(Category: {food['category']})")
-    # User preference/feedback tracing
-    if user and getattr(user, "liked_foods", []):
-        recent_likes = []
-        for fid in getattr(user, "liked_foods", [])[:2]:
-            fdoc = mongo_db.foods.find_one({"food_id": fid})
-            if fdoc and fdoc.get("food_name"):
-                recent_likes.append(fdoc["food_name"])
-        if recent_likes:
-            parts.append(f"You often like: {', '.join(recent_likes)}")
-    if context.get('trending_area'):
+    parts.append(food.get("food_name", ""))
+    if food.get("category"):
+        parts.append(f"Category: {food['category']}")
+    if food.get("veg_nonveg"):
+        parts.append(food["veg_nonveg"])
+    if context.get("trending_area"):
         parts.append(f"Trending in {context['trending_area']}")
-    if context.get('collaborative_info'):
-        parts.append(f"Popular among similar users!")
-    if context.get('community_suggested'):
-        parts.append(f"Community recommended!")
-    return " | ".join(parts)
+    if context.get("collaborative"):
+        parts.append("Similar users liked related dishes")
+    if context.get("community"):
+        parts.append("Community approved")
+    if user and getattr(user, "liked_foods", []):
+        names = []
+        for fid in user.liked_foods[:2]:
+            doc = mongo_db.foods.find_one({"food_id": fid}, {"food_name": 1})
+            if doc and doc.get("food_name"):
+                names.append(doc["food_name"])
+        if names:
+            parts.append("You liked: " + ", ".join(names))
+    return " | ".join([p for p in parts if p])

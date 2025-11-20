@@ -1,64 +1,64 @@
-import os
-import requests
-import random
+from collections import Counter
+import math
+from typing import List, Dict
+from config import mongo_db, CONFIG
+from groq_api import groq_chat
 
-# ----------- Fuzzy Attribute Extraction for Chatbot -----------
+ATTRIBUTES = CONFIG["active_attributes"]
 
-def get_fuzzy_attributes(user_id):
-    """
-    Returns a list of ambiguous or relevant attributes for the user.
-    In production, could query KG or feedback; for now, returns domain-relevant slots.
-    """
-    # These are the probable preferences/slots for Coimbatore food domain.
-    return ["spice_level", "veg_nonveg", "cuisine", "area"]
+def get_fuzzy_attributes(user_id: str) -> List[str]:
+    dist_map = {a: _attribute_distribution(user_id, a) for a in ATTRIBUTES}
+    entropy_map = {a: _entropy(dist_map[a]) for a in ATTRIBUTES}
+    return sorted(ATTRIBUTES, key=lambda a: entropy_map[a], reverse=True)
 
-def calculate_attribute_uncertainty(user_id, attribute):
-    """
-    Returns an uncertainty score [0,1] for an attribute (can be based on user feedback, KG stats, etc).
-    Replace random with real computed logic for production.
-    """
-    # You can add MongoDB/Qdrant analysis here for real uncertainty.
-    return round(random.uniform(0, 1), 3)
+def calculate_attribute_uncertainty(user_id: str, attribute: str) -> float:
+    return round(_entropy(_attribute_distribution(user_id, attribute)), 4)
 
-def explain_recommendation(user_id, food_id):
-    """
-    Provides a short, plain-language explanation for a recommendation.
-    In production, chain KG/feedback/LLM info; here, it calls Groq LLM for a generic reason.
-    """
-    prompt = f"Explain concisely to user {user_id} why food {food_id} was recommended. Be direct, plain and user-friendly."
-    try:
-        reply = groq_chat_api(prompt, [])
-        return reply
-    except Exception as e:
-        print("Groq/explanation API Failure:", e)
-        return "Sorry, cannot explain this recommendation at the moment."
+def explain_recommendation(user_id: str, food_id: str) -> str:
+    food_doc = mongo_db.foods.find_one({"food_id": food_id})
+    if not food_doc:
+        return "Recommendation info unavailable."
+    liked_ids = _liked_food_ids(user_id)
+    categories = [mongo_db.foods.find_one({"food_id": fid}, {"category": 1}).get("category", "")
+                  for fid in liked_ids]
+    cat_counts = Counter([c for c in categories if c])
+    top_cat = cat_counts.most_common(1)[0][0] if cat_counts else None
+    prompt = (
+        f"User has liked {len(liked_ids)} items. "
+        f"Main preference category: {top_cat if top_cat else 'unknown'}. "
+        f"Explain briefly why '{food_doc.get('food_name')}' with category '{food_doc.get('category')}' "
+        f"and '{food_doc.get('veg_nonveg')}' suits them. One short paragraph."
+    )
+    return groq_chat(prompt, [])
 
-# ----------- Groq LLM API Wrapper (for chat/explanation) -----------
+def _liked_food_ids(user_id: str) -> List[str]:
+    udoc = mongo_db.users.find_one({"user_id": user_id}, {"liked_foods": 1})
+    return udoc.get("liked_foods", []) if udoc else []
 
-def groq_chat_api(prompt, dialog_history=[]):
-    api_url = os.getenv("GROQ_URL")
-    api_key = os.getenv("GROQ_API_KEY", "YOUR_GROQ_API_KEY")  # MOVE key to .env, never hardcode!
+def _attribute_distribution(user_id: str, attribute: str) -> Counter:
+    liked = _liked_food_ids(user_id)
+    values = []
+    for fid in liked:
+        fdoc = mongo_db.foods.find_one({"food_id": fid}, {attribute: 1})
+        if fdoc and fdoc.get(attribute):
+            values.append(str(fdoc[attribute]).strip().lower())
+    return Counter(values)
 
-    # Prepare messages (convert "bot" to "assistant" for API)
-    messages = []
-    for item in dialog_history:
-        if item.get("role") == "user" and item.get("content"):
-            messages.append({"role": "user", "content": item["content"]})
-        elif item.get("role") == "bot" and item.get("content"):
-            messages.append({"role": "assistant", "content": item["content"]})
-    messages.append({"role": "user", "content": prompt})
+def _entropy(counter: Counter) -> float:
+    total = sum(counter.values())
+    if total == 0:
+        return 1.0
+    ent = 0.0
+    for c in counter.values():
+        p = c / total
+        ent -= p * math.log2(p)
+    if len(counter) > 1:
+        ent /= math.log2(len(counter))
+    return min(max(ent, 0.0), 1.0)
 
-    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
-    payload = {
-        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
-        "messages": messages,
-        "temperature": 0.85
-    }
-    try:
-        response = requests.post(api_url, headers=headers, json=payload)
-        response.raise_for_status()
-        reply = response.json()["choices"][0]["message"]["content"]
-    except Exception as e:
-        print("Groq API Error Response:", getattr(response, "text", None))
-        return "AI explanation not available right now."
-    return reply
+def next_uncertain_attribute(user_id: str, asked: List[str]) -> str | None:
+    ordered = get_fuzzy_attributes(user_id)
+    for attr in ordered:
+        if attr not in asked:
+            return attr
+    return None

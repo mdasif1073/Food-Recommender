@@ -1,0 +1,775 @@
+food_id,food_name,restaurant_id,description,category,veg_nonveg,ingredients,dish_type,popular_in,price_level
+f001,Veg Fried Rice,r001,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f002,Egg Fried Rice,r001,Fried rice cooked with scrambled egg and spices.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f003,Chicken Fried Rice,r001,Fried rice with shredded chicken and mild Indo-Chinese seasoning.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Moderate
+f004,Mushroom Fried Rice,r001,Veg fried rice variation with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f005,Paneer Rice,r001,Rice tossed with soft paneer cubes and mild masala.,Fried Rice,Veg,"[""rice"",""paneer"",""onion"",""garam masala"",""oil"",""salt""]",main_course,India,Low
+f006,Jeera Rice,r001,Fragrant rice tempered with cumin seeds and ghee.,Rice,Veg,"[""rice"",""cumin"",""ghee"",""salt""]",side_dish,North India,Low
+f007,Garlic Rice,r001,Rice flavored with roasted garlic and herbs.,Rice,Veg,"[""rice"",""garlic"",""butter"",""pepper"",""salt""]",side_dish,India,Low
+f008,Ghee Rice,r001,Simple flavored rice cooked with ghee and whole spices.,Rice,Veg,"[""rice"",""ghee"",""cloves"",""cinnamon"",""bay leaf"",""salt""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r001,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f010,Schezwan Egg Fried Rice,r001,Schezwan fried rice with scrambled egg.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r001,Spicy fried rice cooked with shredded chicken and Schezwan sauce.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Moderate
+f012,Steamed Rice,r001,Plain boiled rice.,Rice,Veg,"[""rice"",""water""]",side_dish,India,Low
+f013,Special Curd Rice,r001,Curd mixed rice with seasoning.,Curd / Rice Items,Veg,"[""rice"",""curd"",""mustard"",""curry leaves"",""green chili"",""salt""]",side_dish,South India,Low
+f014,Chicken Biryani,r001,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r001,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r001,Spiced biryani rice without any meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""curd"",""mint"",""coriander"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f017,Chicken Kheema Biryani,r002,Biryani prepared using minced chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""minced chicken"",""onion"",""tomato"",""ginger garlic paste"",""green chili"",""biryani masala"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f018,Nattukozhi Biryani,r002,Village style biryani with country chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""country chicken"",""onion"",""tomato"",""ginger garlic paste"",""green chili"",""biryani masala"",""ghee"",""mint"",""coriander"",""salt""]",main_course,Tamil Nadu,Low
+f019,Arisi Paruppu Sadham,r002,Mild rice dish with dal and minimal spices.,Meals / Rice Items,Veg,"[""rice"",""toor dal"",""turmeric"",""ghee"",""mustard"",""curry leaves"",""salt""]",main_course,Tamil Nadu,Low
+f020,Non-Veg Meals,r002,Traditional Tamil meal served with rice and gravies.,Meals,Non-Veg,"[""rice"",""sambar"",""rasam"",""thanni kulambu"",""veg poriyal"",""papad"",""pickle""]",full_meal,Tamil Nadu,Low
+f021,Dosa,r002,South Indian crepe made from fermented batter.,Tiffin,Veg,"[""rice"",""urad dal"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f022,Egg Dosa,r002,Dosa topped with beaten egg and pepper.,Tiffin,Egg,"[""rice batter"",""egg"",""pepper"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f023,Roast,r002,Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r002,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f025,Ghee Podi Roast,r002,Dosa sprinkled with spicy podi roasted in ghee.,Tiffin,Veg,"[""rice batter"",""ghee"",""spicy podi"",""oil""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r002,Thick dosa topped with shallots.,Tiffin,Veg,"[""rice batter"",""small onion"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f027,Chapathi,r002,Whole wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f028,Phulka,r002,Soft puffed chapathi.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f029,Parotta,r002,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f030,Nool Parotta,r002,String-layered parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f031,Bun Parotta,r002,Thick fluffy parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f032,Veechu Parotta,r002,Thin stretched parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f033,Egg Kothu Parotta,r002,Minced parotta scrambled with egg and salna.,Parotta & Breads,Egg,"[""parotta"",""egg"",""onion"",""salna"",""chili powder"",""oil"",""salt""]",kothu,Tamil Nadu,Low
+f034,Egg Veechu Parotta,r002,Veechu parotta layered with beaten egg.,Parotta & Breads,Egg,"[""maida"",""egg"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f035,Egg Poriyal,r002,Stir-fried scrambled egg.,Egg Dishes,Egg,"[""egg"",""onion"",""green chili"",""oil"",""salt""]",side_dish,Tamil Nadu,Low
+f036,Omelette,r002,Egg cooked flat with onion & pepper.,Egg Dishes,Egg,"[""egg"",""onion"",""pepper"",""salt"",""oil""]",side_dish,India,Low
+f037,Kalaki,r002,Soft runny omelette.,Egg Dishes,Egg,"[""egg"",""pepper"",""salt"",""oil""]",side_dish,Tamil Nadu,Low
+f038,Curd,r002,Plain curd.,Curd / Rice Items,Veg,"[""curd""]",side_dish,India,Low
+f039,Special Curd,r002,Curd mixed with coriander and seasoning.,Curd / Rice Items,Veg,"[""curd"",""coriander"",""green chili"",""salt""]",side_dish,Tamil Nadu,Low
+f040,Curd Rice,r002,Rice mixed with curd and tempered.,Curd / Rice Items,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f041,Special Curd Rice,r002,Enhanced curd rice with butter & pomegranate.,Curd / Rice Items,Veg,"[""rice"",""curd"",""butter"",""pomegranate"",""curry leaves"",""salt""]",side_dish,Tamil Nadu,Low
+f001,Veg Fried Rice,r003,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f004,Mushroom Fried Rice,r003,Veg fried rice variation with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r003,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f023,Roast,r003,Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r003,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r003,Thick dosa topped with shallots.,Tiffin,Veg,"[""rice batter"",""small onion"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f002,Egg Fried Rice,r004,Fried rice cooked with scrambled egg and spices.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f003,Chicken Fried Rice,r004,Fried rice with shredded chicken and mild Indo-Chinese seasoning.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Moderate
+f010,Schezwan Egg Fried Rice,r004,Schezwan fried rice with scrambled egg.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r004,Spicy fried rice cooked with shredded chicken and Schezwan sauce.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Moderate
+f029,Parotta,r004,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f030,Nool Parotta,r004,String-layered parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f031,Bun Parotta,r004,Thick fluffy parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f032,Veechu Parotta,r004,Thin stretched parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f033,Egg Kothu Parotta,r004,Minced parotta scrambled with egg and salna.,Parotta & Breads,Egg,"[""parotta"",""egg"",""onion"",""salna"",""chili powder"",""oil"",""salt""]",kothu,Tamil Nadu,Low
+f034,Egg Veechu Parotta,r004,Veechu parotta layered with beaten egg.,Parotta & Breads,Egg,"[""maida"",""egg"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f020,Non-Veg Meals,r004,Traditional Tamil meal served with rice and gravies.,Meals,Non-Veg,"[""rice"",""sambar"",""rasam"",""thanni kulambu"",""veg poriyal"",""papad"",""pickle""]",full_meal,Tamil Nadu,Low
+f040,Curd Rice,r004,Rice mixed with curd and tempered.,Curd / Rice Items,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f014,Chicken Biryani,r004,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r004,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r004,Spiced biryani rice without any meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""curd"",""mint"",""coriander"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f029,Parotta,r005,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f032,Veechu Parotta,r005,Thin stretched parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f001,Veg Fried Rice,r005,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f002,Egg Fried Rice,r005,Fried rice cooked with scrambled egg and spices.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f003,Chicken Fried Rice,r005,Fried rice with shredded chicken and mild Indo-Chinese seasoning.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Moderate
+f004,Mushroom Fried Rice,r005,Veg fried rice variation with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r005,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f010,Schezwan Egg Fried Rice,r005,Schezwan fried rice with scrambled egg.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r005,Spicy fried rice cooked with shredded chicken and Schezwan sauce.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Moderate
+f033,Egg Kothu Parotta,r005,Minced parotta scrambled with egg and salna.,Parotta & Breads,Egg,"[""parotta"",""egg"",""onion"",""salna"",""chili powder"",""oil"",""salt""]",kothu,Tamil Nadu,Low
+f034,Egg Veechu Parotta,r005,Veechu parotta layered with beaten egg.,Parotta & Breads,Egg,"[""maida"",""egg"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f040,Curd Rice,r005,Rice mixed with curd and tempered.,Curd / Rice Items,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f014,Chicken Biryani,r005,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r005,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r005,Spiced biryani rice without any meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""curd"",""mint"",""coriander"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f023,Roast,r006,Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r006,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f001,Veg Fried Rice,r006,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f004,Mushroom Fried Rice,r006,Veg fried rice variation with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r006,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f027,Chapathi,r006,Whole wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f040,Curd Rice,r006,Rice mixed with curd and tempered.,Curd / Rice Items,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f036,Omelette,r007,Egg cooked flat with onion & pepper.,Egg Dishes,Egg,"[""egg"",""onion"",""pepper"",""salt"",""oil""]",side_dish,India,Low
+f037,Kalaki,r007,Soft runny omelette.,Egg Dishes,Egg,"[""egg"",""pepper"",""salt"",""oil""]",side_dish,Tamil Nadu,Low
+f029,Parotta,r007,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f031,Bun Parotta,r007,Thick fluffy parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f030,Nool Parotta,r007,String-layered parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f032,Veechu Parotta,r007,Thin stretched parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f033,Egg Kothu Parotta,r007,Minced parotta scrambled with egg and salna.,Parotta & Breads,Egg,"[""parotta"",""egg"",""onion"",""salna"",""chili powder"",""oil"",""salt""]",kothu,Tamil Nadu,Low
+f034,Egg Veechu Parotta,r007,Veechu parotta layered with beaten egg.,Parotta & Breads,Egg,"[""maida"",""egg"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f023,Roast,r007,Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r007,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f020,Non-Veg Meals,r007,Traditional Tamil meal served with rice and gravies.,Meals,Non-Veg,"[""rice"",""sambar"",""rasam"",""thanni kulambu"",""veg poriyal"",""papad"",""pickle""]",full_meal,Tamil Nadu,Low
+f040,Curd Rice,r007,Rice mixed with curd and tempered.,Curd / Rice Items,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f016,Plain Biryani,r007,Spiced biryani rice without any meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""curd"",""mint"",""coriander"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f015,Egg Biryani,r007,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f014,Chicken Biryani,r007,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f001,Veg Fried Rice,r008,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f002,Egg Fried Rice,r008,Fried rice cooked with scrambled egg and spices.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f003,Chicken Fried Rice,r008,Fried rice with shredded chicken and mild Indo-Chinese seasoning.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Moderate
+f006,Jeera Rice,r008,Fragrant rice tempered with cumin seeds and ghee.,Rice,Veg,"[""rice"",""cumin"",""ghee"",""salt""]",side_dish,North India,Low
+f008,Ghee Rice,r008,Simple flavored rice cooked with ghee and whole spices.,Rice,Veg,"[""rice"",""ghee"",""cloves"",""cinnamon"",""bay leaf"",""salt""]",main_course,South India,Low
+f007,Garlic Rice,r008,Rice flavored with roasted garlic and herbs.,Rice,Veg,"[""rice"",""garlic"",""butter"",""pepper"",""salt""]",side_dish,India,Low
+f005,Paneer Rice,r008,Rice tossed with soft paneer cubes and mild masala.,Fried Rice,Veg,"[""rice"",""paneer"",""onion"",""garam masala"",""oil"",""salt""]",main_course,India,Low
+f004,Mushroom Fried Rice,r008,Veg fried rice variation with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r008,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f010,Schezwan Egg Fried Rice,r008,Schezwan fried rice with scrambled egg.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r008,Spicy fried rice cooked with shredded chicken and Schezwan sauce.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Moderate
+f014,Chicken Biryani,r008,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r008,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r008,Spiced biryani rice without any meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""curd"",""mint"",""coriander"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f014,Chicken Biryani,r010,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r010,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r010,Spiced biryani rice without any meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""curd"",""mint"",""coriander"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f018,Nattukozhi Biryani,r010,Village style biryani with country chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""country chicken"",""onion"",""tomato"",""ginger garlic paste"",""green chili"",""biryani masala"",""ghee"",""mint"",""coriander"",""salt""]",main_course,Tamil Nadu,Low
+f001,Veg Fried Rice,r011,Stir-fried long grain rice with mixed vegetables.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion""]",main_course,South India,Low
+f004,Mushroom Fried Rice,r011,Fried rice mixed with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion""]",main_course,South India,Low
+f003,Chicken Fried Rice,r011,Fried rice tossed with chicken pieces.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""spring onion""]",main_course,India,Low
+f002,Egg Fried Rice,r011,Fried rice cooked with scrambled eggs.,Fried Rice,Non-Veg,"[""rice"",""egg"",""spring onion""]",main_course,India,Low
+f020,Veg Noodles,r011,Stir-fried noodles with vegetables.,Noodles,Veg,"[""noodles"",""carrot"",""beans"",""capsicum""]",main_course,India,Low
+f021,Mushroom Noodles,r011,Noodles tossed with mushrooms.,Noodles,Veg,"[""noodles"",""mushroom"",""soy sauce""]",main_course,India,Low
+f019,Egg Noodles,r011,Noodles tossed with scrambled eggs.,Noodles,Non-Veg,"[""noodles"",""egg"",""spring onion""]",main_course,India,Low
+f024,Chicken Noodles,r011,Noodles tossed with chicken pieces.,Noodles,Non-Veg,"[""noodles"",""chicken"",""soy sauce""]",main_course,India,Low
+f018,Veg Biryani,r011,Vegetable biryani cooked with mild spices.,Biryani,Veg,"[""rice"",""vegetables"",""masala""]",main_course,South India,Low
+f017,Mushroom Biryani,r011,Biryani cooked with mushrooms.,Biryani,Veg,"[""rice"",""mushroom"",""masala""]",main_course,India,Low
+f014,Chicken Biryani,r011,Fragrant biryani with chicken.,Biryani,Non-Veg,"[""rice"",""chicken"",""masala""]",main_course,South India,Low
+f016,Mutton Biryani,r011,Slow-cooked mutton biryani.,Biryani,Non-Veg,"[""rice"",""mutton"",""masala""]",main_course,India,Low
+f039,Dosa,r011,Classic fermented South Indian dosa.,Dosa,Veg,"[""rice batter"",""urad dal""]",breakfast,South India,Low
+f041,Onion Roast,r011,Roast dosa topped with onions.,Dosa,Veg,"[""dosa batter"",""onion""]",breakfast,South India,Low
+f043,Ghee Roast,r011,Crispy dosa roasted with ghee.,Dosa,Veg,"[""rice batter"",""ghee""]",breakfast,South India,Low
+f042,Onion Uthappam,r011,Thick dosa topped with onions.,Uthappam,Veg,"[""rice batter"",""onion""]",breakfast,South India,Low
+f044,Uthappam,r011,Soft thick dosa-like pancake.,Uthappam,Veg,"[""rice batter"",""urad dal""]",breakfast,South India,Low
+f036,Idly,r011,Steamed soft rice cakes.,Idly,Veg,"[""rice"",""urad dal""]",breakfast,South India,Low
+f027,Chapathi,r011,Whole wheat flatbread.,Breads,Veg,"[""wheat flour"",""water""]",bread,India,Low
+f029,Roti,r011,Soft whole wheat roti.,Breads,Veg,"[""wheat flour"",""water""]",bread,India,Low
+f028,Phulka,r011,Soft puffed chapathi.,Breads,Veg,"[""wheat flour"",""water""]",bread,India,Low
+f026,Parotta,r011,Layered South Indian bread.,Breads,Veg,"[""maida"",""oil""]",bread,Tamil Nadu,Low
+f031,Bun Parotta,r011,Soft layered bun-style parotta.,Breads,Veg,"[""maida"",""oil""]",bread,Tamil Nadu,Low
+f025,Nool Parotta,r011,Thin string-like layered parotta.,Breads,Veg,"[""maida"",""oil""]",bread,Tamil Nadu,Low
+f033,Veechu Parotta,r011,Thin stretched parotta.,Breads,Veg,"[""maida"",""oil""]",bread,Tamil Nadu,Low
+f034,Egg Kothu Parotta,r011,Shredded parotta tossed with egg.,Parotta,Non-Veg,"[""parotta"",""egg""]",main_course,Tamil Nadu,Low
+f035,Chicken Kothu Parotta,r011,Shredded parotta mixed with chicken.,Parotta,Non-Veg,"[""parotta"",""chicken"",""egg""]",main_course,Tamil Nadu,Low
+f030,Wheat Parotta,r011,Layered parotta made with wheat flour.,Breads,Veg,"[""wheat flour"",""oil""]",bread,Tamil Nadu,Low
+f037,Tomato Rice,r011,Tangy rice cooked with tomatoes.,Rice,Veg,"[""rice"",""tomato"",""spices""]",main_course,South India,Low
+f038,Lemon Rice,r011,Rice seasoned with lemon and spices.,Rice,Veg,"[""rice"",""lemon"",""mustard""]",main_course,South India,Low
+f013,Curd Rice,r011,Creamy curd-mixed rice.,Rice,Veg,"[""rice"",""curd""]",main_course,South India,Low
+f020,Non-Veg Meals,r012,Traditional Tamil meal served with rice and gravies.,Meals,Non-Veg,"[""rice"",""sambar"",""rasam"",""thanni kulambu"",""veg poriyal"",""papad"",""pickle""]",full_meal,Tamil Nadu,Low
+f014,Chicken Biryani,r012,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f017,Chicken Kheema Biryani,r012,Biryani prepared using minced chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""minced chicken"",""onion"",""tomato"",""ginger garlic paste"",""green chili"",""biryani masala"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f018,Nattukozhi Biryani,r012,Village style biryani with country chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""country chicken"",""onion"",""tomato"",""ginger garlic paste"",""green chili"",""biryani masala"",""ghee"",""mint"",""coriander"",""salt""]",main_course,Tamil Nadu,Low
+f023,Roast,r012,Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r012,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r012,Thick dosa topped with shallots.,Tiffin,Veg,"[""rice batter"",""small onion"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f027,Chapathi,r012,Whole wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f028,Phulka,r012,Soft puffed chapathi.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f029,Parotta,r012,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f030,Nool Parotta,r012,String-layered parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f031,Bun Parotta,r012,Thick fluffy parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f032,Veechu Parotta,r012,Thin stretched parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f033,Egg Kothu Parotta,r012,Minced parotta scrambled with egg and salna.,Parotta & Breads,Egg,"[""parotta"",""egg"",""onion"",""salna"",""chili powder"",""oil"",""salt""]",kothu,Tamil Nadu,Low
+f034,Egg Veechu Parotta,r012,Veechu parotta layered with beaten egg.,Parotta & Breads,Egg,"[""maida"",""egg"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f035,Egg Poriyal,r012,Stir-fried scrambled egg.,Egg Dishes,Egg,"[""egg"",""onion"",""green chili"",""oil"",""salt""]",side_dish,Tamil Nadu,Low
+f036,Omelette,r012,Egg cooked flat with onion & pepper.,Egg Dishes,Egg,"[""egg"",""onion"",""pepper"",""salt"",""oil""]",side_dish,India,Low
+f037,Kalaki,r012,Soft runny omelette.,Egg Dishes,Egg,"[""egg"",""pepper"",""salt"",""oil""]",side_dish,Tamil Nadu,Low
+f014,Chicken Biryani,r013,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r013,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f018,Nattukozhi Biryani,r013,Village style biryani with country chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""country chicken"",""onion"",""tomato"",""ginger garlic paste"",""green chili"",""biryani masala"",""ghee"",""mint"",""coriander"",""salt""]",main_course,Tamil Nadu,Low
+f020,Non-Veg Meals,r013,Traditional Tamil meal served with rice and gravies.,Meals,Non-Veg,"[""rice"",""sambar"",""rasam"",""thanni kulambu"",""veg poriyal"",""papad"",""pickle""]",full_meal,Tamil Nadu,Low
+f001,Veg Fried Rice,r013,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f002,Egg Fried Rice,r013,Fried rice cooked with scrambled egg and spices.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f003,Chicken Fried Rice,r013,Fried rice with shredded chicken and mild Indo-Chinese seasoning.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Moderate
+f009,Schezwan Veg Fried Rice,r013,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f010,Schezwan Egg Fried Rice,r013,Schezwan fried rice with scrambled egg.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r013,Spicy fried rice cooked with shredded chicken and Schezwan sauce.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Moderate
+f027,Chapathi,r013,Whole wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f029,Parotta,r013,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f030,Nool Parotta,r013,String-layered parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f031,Bun Parotta,r013,Thick fluffy parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f032,Veechu Parotta,r013,Thin stretched parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f033,Egg Kothu Parotta,r013,Minced parotta scrambled with egg and salna.,Parotta & Breads,Egg,"[""parotta"",""egg"",""onion"",""salna"",""chili powder"",""oil"",""salt""]",kothu,Tamil Nadu,Low
+f034,Egg Veechu Parotta,r013,Veechu parotta layered with beaten egg.,Parotta & Breads,Egg,"[""maida"",""egg"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f023,Roast,r013,Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r013,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r013,Thick dosa topped with shallots.,Tiffin,Veg,"[""rice batter"",""small onion"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f014,Chicken Biryani,r014,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r014,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r014,Simple aromatic biryani rice cooked with spices.,Biryani,Veg,"[""jeeraga samba rice"",""ghee"",""onion"",""mint"",""coriander"",""biryani masala"",""salt""]",main_course,South India,Low
+f001,Veg Fried Rice,r014,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f002,Egg Fried Rice,r014,Fried rice cooked with scrambled egg and spices.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f003,Chicken Fried Rice,r014,Fried rice with shredded chicken and mild Indo-Chinese seasoning.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Moderate
+f004,Mushroom Fried Rice,r014,Fried rice cooked with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f005,Gobi Fried Rice,r014,Fried rice with crispy gobi fry.,Fried Rice,Veg,"[""rice"",""cauliflower"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Low
+f006,Egg Noodles,r014,Noodles tossed with scrambled eggs and vegetables.,Noodles,Egg,"[""noodles"",""egg"",""capsicum"",""carrot"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,India,Low
+f007,Chicken Noodles,r014,Noodles stir-fried with shredded chicken.,Noodles,Non-Veg,"[""noodles"",""chicken"",""soy sauce"",""capsicum"",""carrot"",""pepper"",""oil"",""salt""]",main_course,India,Low
+f008,Veg Noodles,r014,Vegetable noodles cooked with Indo-Chinese seasoning.,Noodles,Veg,"[""noodles"",""carrot"",""beans"",""cabbage"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,India,Low
+f012,Mushroom Noodles,r014,Noodles cooked with sautéed mushrooms.,Noodles,Veg,"[""noodles"",""mushroom"",""capsicum"",""soy sauce"",""oil"",""salt""]",main_course,India,Low
+f013,Gobi Noodles,r014,Noodles cooked with crispy gobi.,Noodles,Veg,"[""noodles"",""cauliflower"",""soy sauce"",""capsicum"",""oil"",""salt""]",main_course,India,Low
+f027,Chapathi,r014,Whole wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f036,Omelette,r014,Egg cooked flat with onion & pepper.,Egg Dishes,Egg,"[""egg"",""onion"",""pepper"",""salt"",""oil""]",side_dish,India,Low
+f038,Bread Omelette,r014,Bread dipped in egg mixture and cooked.,Egg Dishes,Egg,"[""egg"",""bread"",""pepper"",""salt"",""oil""]",side_dish,India,Low
+f039,Egg Roll,r014,Stuffed roll with egg masala.,Rolls,Egg,"[""egg"",""maida"",""onion"",""capsicum"",""pepper"",""salt""]",snack,India,Low
+f040,Veg Sandwich,r014,Grilled sandwich stuffed with vegetables.,Sandwich,Veg,"[""bread"",""carrot"",""cabbage"",""capsicum"",""pepper"",""salt"",""butter""]",snack,India,Low
+f041,Chicken Sandwich,r014,Grilled sandwich with shredded chicken filling.,Sandwich,Non-Veg,"[""bread"",""chicken"",""pepper"",""mayonnaise"",""salt""]",snack,India,Low
+f014,Chicken Biryani,r015,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f040,Curd Rice,r015,Rice mixed with curd and tempered with curry leaves and mustard.,Meal Item,Veg,"[""rice"",""curd"",""salt"",""curry leaves"",""mustard""]",side_dish,South India,Moderate
+f019,Plain Dosa,r015,Simple crispy dosa made with rice and urad dal.,Dosa,Veg,"[""rice"",""urad dal"",""salt"",""oil""]",tiffin,South India,Low
+f022,Masala Dosa,r015,Crispy dosa filled with potato masala.,Dosa,Veg,"[""rice"",""urad dal"",""potato"",""onion"",""turmeric"",""salt"",""oil""]",tiffin,South India,Low
+f025,Podi Dosa,r015,Dosa sprinkled with spicy podi powder.,Dosa,Veg,"[""rice"",""urad dal"",""podi"",""oil"",""salt""]",tiffin,South India,Low
+f024,Ghee Roast,r015,Crispy dosa roasted in ghee.,Dosa,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f022,Egg Dosa,r015,Dosa topped with egg mixture.,Dosa,Egg,"[""rice"",""urad dal"",""egg"",""pepper"",""salt"",""oil""]",tiffin,South India,Low
+f026,Small Onion Uttapam,r015,Uttapam topped with small onions.,Uttapam,Veg,"[""rice batter"",""small onion"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f033,Chicken Kothu,r015,Minced parotta scrambled with chicken and salna.,Kothu,Non-Veg,"[""parotta"",""chicken"",""egg"",""salna"",""onion"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r016,Simple aromatic biryani rice cooked with spices.,Biryani,Veg,"[""jeeraga samba rice"",""ghee"",""onion"",""mint"",""coriander"",""biryani masala"",""salt""]",main_course,South India,Low
+f015,Egg Biryani,r016,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f014,Chicken Biryani,r016,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f001,Veg Fried Rice,r016,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f002,Egg Fried Rice,r016,Fried rice cooked with scrambled egg and spices.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f003,Chicken Fried Rice,r016,Fried rice with shredded chicken and mild Indo-Chinese seasoning.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Moderate
+f009,Schezwan Veg Fried Rice,r016,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f010,Schezwan Egg Fried Rice,r016,Schezwan fried rice with scrambled egg.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r016,Spicy fried rice with chicken and Schezwan sauce.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f008,Veg Noodles,r016,Vegetable noodles cooked with Indo-Chinese seasoning.,Noodles,Veg,"[""noodles"",""carrot"",""beans"",""cabbage"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,India,Low
+f006,Egg Noodles,r016,Noodles tossed with scrambled eggs and vegetables.,Noodles,Egg,"[""noodles"",""egg"",""capsicum"",""carrot"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,India,Low
+f007,Chicken Noodles,r016,Noodles stir-fried with shredded chicken.,Noodles,Non-Veg,"[""noodles"",""chicken"",""capsicum"",""soy sauce"",""pepper"",""carrot"",""oil"",""salt""]",main_course,India,Low
+f019,Plain Dosa,r016,Simple crispy dosa made with rice and urad dal.,Dosa,Veg,"[""rice"",""urad dal"",""salt"",""oil""]",tiffin,South India,Low
+f021,Onion Dosa,r016,Crispy dosa topped with onions.,Dosa,Veg,"[""rice"",""urad dal"",""onion"",""salt"",""oil""]",tiffin,South India,Low
+f022,Masala Dosa,r016,Crispy dosa filled with potato masala.,Dosa,Veg,"[""rice"",""urad dal"",""potato"",""onion"",""turmeric"",""salt"",""oil""]",tiffin,South India,Low
+f025,Podi Dosa,r016,Dosa sprinkled with spicy podi powder.,Dosa,Veg,"[""rice"",""urad dal"",""podi"",""salt"",""oil""]",tiffin,South India,Low
+f024,Ghee Roast,r016,Crispy dosa roasted in ghee.,Dosa,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f027,Chapathi,r016,Whole wheat flatbread.,Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f028,Phulka,r016,Soft puffed chapati.,Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f029,Parotta,r016,Layered flaky parotta.,Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f032,Veechu Parotta,r016,Thin stretched parotta.,Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f030,Nool Parotta,r016,String–layered parotta.,Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f033,Egg Kothu Parotta,r016,Minced parotta scrambled with egg and salna.,Kothu,Egg,"[""parotta"",""egg"",""onion"",""salna"",""chili powder"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f040,Curd Rice,r016,Rice mixed with curd and tempered.,Rice,Veg,"[""rice"",""curd"",""mustard"",""curry leaves"",""salt""]",side_dish,South India,Low
+f001,Veg Fried Rice,r017,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f004,Mushroom Fried Rice,r017,Veg fried rice variation with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r017,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f002,Egg Fried Rice,r017,Fried rice cooked with scrambled egg and spices.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f010,Schezwan Egg Fried Rice,r017,Schezwan fried rice with scrambled egg.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f003,Chicken Fried Rice,r017,Fried rice with shredded chicken and mild Indo-Chinese seasoning.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Moderate
+f011,Schezwan Chicken Rice,r017,Spicy fried rice cooked with shredded chicken and Schezwan sauce.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Moderate
+f023,Roast,r017,Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r017,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r017,Thick dosa topped with shallots.,Tiffin,Veg,"[""rice batter"",""small onion"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f029,Parotta,r017,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f031,Bun Parotta,r017,Thick fluffy parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f032,Veechu Parotta,r017,Thin stretched parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f033,Egg Kothu Parotta,r017,Minced parotta scrambled with egg and salna.,Parotta & Breads,Egg,"[""parotta"",""egg"",""onion"",""salna"",""chili powder"",""oil"",""salt""]",kothu,Tamil Nadu,Low
+f034,Egg Veechu Parotta,r017,Veechu parotta layered with beaten egg.,Parotta & Breads,Egg,"[""maida"",""egg"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f020,Non-Veg Meals,r017,Traditional Tamil meal served with rice and gravies.,Meals,Non-Veg,"[""rice"",""sambar"",""rasam"",""thanni kulambu"",""veg poriyal"",""papad"",""pickle""]",full_meal,Tamil Nadu,Low
+f040,Curd Rice,r017,Rice mixed with curd and tempered.,Curd / Rice Items,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f016,Plain Biryani,r017,Spiced biryani rice without any meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""curd"",""mint"",""coriander"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f015,Egg Biryani,r017,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f014,Chicken Biryani,r017,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f001,Veg Fried Rice,r018,Stir-fried long grain rice with mixed vegetables.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce""]",main_course,South India,Low
+f003,Chicken Fried Rice,r018,Fried rice tossed with chicken pieces and spices.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""spring onion"",""soy sauce""]",main_course,India,Low
+f004,Mushroom Fried Rice,r018,Fried rice mixed with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r018,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""schezwan sauce""]",main_course,India,Low
+f011,Schezwan Chicken Fried Rice,r018,Chicken fried rice blended with Schezwan sauce.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce""]",main_course,India,Low
+f006,Jeera Rice,r018,Fragrant cumin-tempered steamed rice.,Rice,Veg,"[""rice"",""cumin"",""ghee""]",side_dish,India,Low
+f012,Steamed Rice,r018,Plain boiled white rice.,Rice,Veg,"[""rice"",""water""]",side_dish,India,Low
+f008,Ghee Rice,r018,Aromatic rice cooked with ghee and spices.,Rice,Veg,"[""rice"",""ghee"",""spices""]",side_dish,South India,Low
+f020,Veg Noodles,r018,Stir-fried noodles with vegetables.,Noodles,Veg,"[""noodles"",""carrot"",""beans"",""capsicum""]",main_course,India,Low
+f021,Mushroom Noodles,r018,Noodles tossed with mushrooms.,Noodles,Veg,"[""noodles"",""mushroom"",""soy sauce""]",main_course,India,Low
+f022,Schezwan Veg Noodles,r018,Spicy noodles cooked with Schezwan sauce.,Noodles,Veg,"[""noodles"",""schezwan sauce"",""capsicum""]",main_course,India,Low
+f023,Schezwan Chicken Noodles,r018,Chicken noodles blended with Schezwan sauce.,Noodles,Non-Veg,"[""noodles"","" chicken"",""schezwan sauce""]",main_course,India,Low
+f014,Chicken Biryani,r018,Fragrant basmati biryani cooked with chicken.,Biryani,Non-Veg,"[""rice"",""chicken"",""masala""]",main_course,South India,Low
+f015,Egg Biryani,r018,Biryani infused with boiled eggs.,Biryani,Non-Veg,"[""rice"",""egg"",""masala""]",main_course,India,Low
+f016,Mutton Biryani,r018,Slow-cooked mutton layered with biryani rice.,Biryani,Non-Veg,"[""rice"",""mutton"",""masala""]",main_course,India,Low
+f017,Mushroom Biryani,r018,Vegetarian biryani with mushrooms.,Biryani,Veg,"[""rice"",""mushroom"",""masala""]",main_course,India,Low
+f018,Plain Biryani,r018,Simple aromatic biryani rice.,Biryani,Veg,"[""rice"",""spices""]",main_course,India,Low
+f027,Chapathi,r018,Whole wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""water""]",bread,India,Low
+f028,Phulka,r018,Soft puffed chapathi.,Parotta & Breads,Veg,"[""wheat flour"",""water""]",bread,India,Low
+f030,Wheat Parotta,r018,Layered wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""oil""]",bread,South India,Low
+f031,Bun Parotta,r018,Soft layered bread.,Parotta & Breads,Veg,"[""maida"",""oil""]",bread,South India,Low
+f032,Chilly Parotta,r018,Spicy Indo-Chinese style parotta pieces.,Parotta & Breads,Veg,"[""parotta"",""capsicum"",""chilli""]",main_course,Tamil Nadu,Low
+f033,Veechu Parotta,r018,Thin stretched parotta.,Parotta & Breads,Veg,"[""maida"",""oil""]",bread,Tamil Nadu,Low
+f034,Egg Parotta,r018,Parotta tossed with eggs.,Parotta & Breads,Non-Veg,"[""parotta"",""egg""]",main_course,Tamil Nadu,Low
+f035,Chicken Kothu Parotta,r018,Shredded parotta mixed with chicken and spices.,Parotta & Breads,Non-Veg,"[""parotta"",""chicken"",""egg""]",main_course,Tamil Nadu,Low
+f040,Plain Roast,r018,Crispy dosa roasted with ghee or oil.,Dosa,Veg,"[""rice batter"",""urad dal""]",breakfast,South India,Low
+f041,Onion Roast,r018,Roast dosa topped with chopped onions.,Dosa,Veg,"[""dosa batter"",""onion""]",breakfast,South India,Low
+f042,Onion Uthappam,r018,Thick dosa with onion topping.,Uthappam,Veg,"[""dosa batter"",""onion""]",breakfast,South India,Low
+f043,Ghee Roast,r018,Thin crispy dosa roasted with ghee.,Dosa,Veg,"[""rice batter"",""ghee""]",breakfast,South India,Low
+f044,Uthappam,r018,Thick dosa made with fermented batter.,Uthappam,Veg,"[""rice batter"",""urad dal""]",breakfast,South India,Low
+f027,Chapathi,r019,Whole wheat flatbread,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f029,Parotta,r019,Layered flaky bread made with maida,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f036,Omelette,r019,Egg cooked flat with onion & pepper,Egg Dishes,Egg,"[""egg"",""onion"",""pepper"",""salt"",""oil""]",side_dish,India,Low
+f037,Kalaki,r019,Soft runny omelette,Egg Dishes,Egg,"[""egg"",""pepper"",""salt"",""oil""]",side_dish,Tamil Nadu,Low
+f035,Egg Poriyal,r019,stir-fried scrambled egg,Egg Dishes,Egg,"[""egg"",""onion"",""green chili"",""oil"",""salt""]",side_dish,Tamil Nadu,Low
+f020,Non-Veg Meals,r019,Traditional Tamil non-veg meal,Meals,Non-Veg,"[""rice"",""curries"",""sides"",""pickle"",""papad""]",full_meal,Tamil Nadu,Low
+f014,Chicken Biryani,r019,Tamil Nadu style biryani with jeeraga samba rice and tender chicken,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""spices"",""ghee""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r019,Fragrant biryani rice cooked with boiled eggs,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""spices"",""curd"",""mint""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r019,Spiced biryani rice without meat or egg,Biryani,Veg,"[""jeeraga samba rice"",""spices"",""curd"",""mint""]",main_course,Tamil Nadu,Low
+f014,Chicken Biryani,r020,Traditional spiced chicken biryani.,Biryani,Non-Veg,"[""rice"",""chicken"",""onion"",""spices"",""ghee""]",main_course,Tamil Nadu,Low
+f014,Chicken Biryani,r020,Nattu kozhi biryani variant.,Biryani,Non-Veg,"[""rice"",""country chicken"",""spices"",""ghee""]",main_course,Tamil Nadu,Low
+f014,Chicken Biryani,r020,Chicken 65 biryani variation.,Biryani,Non-Veg,"[""rice"",""chicken"",""spices"",""ghee""]",main_course,Tamil Nadu,Low
+f015,Egg Biryani,r020,Biryani with boiled eggs.,Biryani,Egg,"[""rice"",""egg"",""spices"",""onion""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r020,Plain flavored biryani rice.,Biryani,Veg,"[""rice"",""ghee"",""whole spices""]",main_course,Tamil Nadu,Low
+f001,Veg Fried Rice,r020,Stir-fried rice with vegetables.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""capsicum"",""soy sauce""]",main_course,India,Low
+f002,Egg Fried Rice,r020,Fried rice with scrambled egg.,Fried Rice,Egg,"[""rice"",""egg"",""soy sauce"",""pepper""]",main_course,India,Low
+f004,Mushroom Fried Rice,r020,Fried rice with mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce""]",main_course,India,Low
+f010,Schezwan Egg Fried Rice,r020,Spicy schezwan egg fried rice.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""capsicum""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r020,Spicy schezwan chicken fried rice.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion""]",main_course,India,Low
+f008,Ghee Rice,r020,Flavored ghee rice.,Rice,Veg,"[""rice"",""ghee"",""spices""]",main_course,South India,Low
+f006,Jeera Rice,r020,Jeera flavored rice.,Rice,Veg,"[""rice"",""cumin"",""ghee""]",side_dish,North India,Low
+f005,Paneer Rice,r020,Paneer fried rice variant.,Fried Rice,Veg,"[""rice"",""paneer"",""onion"",""garam masala""]",main_course,India,Low
+f029,Parotta,r020,Flaky layered parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""water"",""salt""]",parotta,Tamil Nadu,Low
+f031,Bun Parotta,r020,Soft layered bun parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""milk"",""salt""]",parotta,Tamil Nadu,Low
+f032,Veechu Parotta,r020,Thin stretched parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f033,Egg Kothu Parotta,r020,Kothu parotta with egg.,Parotta & Breads,Egg,"[""parotta"",""egg"",""onion"",""masala""]",kothu,Tamil Nadu,Low
+f027,Chapathi,r020,Whole wheat flatbread.,Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f035,Egg Poriyal,r020,Simple egg roast / fry.,Egg,Egg,"[""egg"",""onion"",""chili"",""pepper""]",side_dish,South India,Low
+f036,Omelette,r020,Indian masala omelette.,Egg,Egg,"[""egg"",""onion"",""chili"",""salt""]",side_dish,India,Low
+f026,Small Onion Uttapam,r020,Thick dosa with onions.,Tiffin,Veg,"[""rice batter"",""shallots"",""oil""]",tiffin,Tamil Nadu,Low
+f023,Roast,r020,Plain roast dosa.,Tiffin,Veg,"[""rice"",""urad dal"",""oil""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r020,Onion roast variation.,Tiffin,Veg,"[""rice batter"",""shallots""]",tiffin,Tamil Nadu,Low
+f035,Egg Poriyal,r020,Egg roast dosa style.,Egg,Egg,"[""egg"",""spices""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r020,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee""]",tiffin,Tamil Nadu,Low
+f025,Ghee Podi Roast,r020,Spicy podi-coated roast dosa.,Tiffin,Veg,"[""rice batter"",""ghee"",""podi""]",tiffin,Tamil Nadu,Low
+f025,Ghee Podi Roast,r020,Masala roast variant.,Tiffin,Veg,"[""rice batter"",""podi"",""ghee""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r020,Onion uthappam.,Tiffin,Veg,"[""rice batter"",""onion""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r020,Tomato uthappam variant.,Tiffin,Veg,"[""rice batter"",""tomato"",""onion""]",tiffin,Tamil Nadu,Low
+f023,Roast,r021,Plain roast dosa.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r021,Ghee roast dosa.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f025,Ghee Podi Roast,r021,Podi roast variant.,Tiffin,Veg,"[""rice batter"",""ghee"",""spicy podi"",""oil""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r021,Onion roast / uthappam variants.,Tiffin,Veg,"[""rice batter"",""small onion"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f023,Roast,r021,Rava roast variant.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r021,Ghee rava roast.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r021,Onion rava roast.,Tiffin,Veg,"[""rice batter"",""small onion"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f025,Ghee Podi Roast,r021,Rava masala roast.,Tiffin,Veg,"[""rice batter"",""ghee"",""spicy podi"",""oil""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r021,Cashew rava roast.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f001,Veg Fried Rice,r021,Vegetable fried rice.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce""]",main_course,South India,Low
+f005,Paneer Rice,r021,Paneer fried rice variant.,Fried Rice,Veg,"[""rice"",""paneer"",""onion"",""garam masala"",""salt""]",main_course,India,Low
+f009,Schezwan Veg Fried Rice,r021,Spicy schezwan fried rice.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""schezwan sauce""]",main_course,India,Low
+f012,Steamed Rice,r021,Plain steamed rice.,Rice,Veg,"[""rice"",""water""]",side_dish,India,Low
+f006,Jeera Rice,r021,Jeera flavored rice.,Rice,Veg,"[""rice"",""cumin"",""ghee"",""salt""]",side_dish,North India,Low
+f008,Ghee Rice,r021,Flavored ghee rice.,Rice,Veg,"[""rice"",""ghee"",""spices""]",main_course,South India,Low
+f040,Curd Rice,r021,Curd mixed rice.,Rice,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f041,Special Curd Rice,r021,Curd rice with extras.,Rice,Veg,"[""rice"",""curd"",""butter"",""pomegranate""]",side_dish,Tamil Nadu,Low
+f014,Chicken Biryani,r022,Traditional chicken biryani.,Biryani,Non-Veg,"[""rice"",""chicken"",""spices"",""ghee""]",main_course,Tamil Nadu,Low
+f015,Egg Biryani,r022,Biryani with egg.,Biryani,Egg,"[""rice"",""egg"",""spices""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r022,Plain biryani rice.,Biryani,Veg,"[""rice"",""ghee"",""spices""]",main_course,Tamil Nadu,Low
+f017,Chilli Chicken,r022,Spicy Indo-Chinese chicken.,Starter,Non-Veg,"[""chicken"",""chilli"",""garlic"",""soy sauce""]",starter,India,Low
+f018,Chicken 65,r022,South Indian crispy chicken.,Starter,Non-Veg,"[""chicken"",""curd"",""chilli"",""spices""]",starter,Tamil Nadu,Low
+f019,Chicken Manchurian,r022,Indo-Chinese manchurian.,Starter,Non-Veg,"[""chicken"",""soy sauce"",""garlic""]",starter,India,Low
+f020,Pepper Chicken,r022,Pepper spiced chicken fry.,Starter,Non-Veg,"[""chicken"",""pepper"",""garlic""]",main_course,Tamil Nadu,Low
+f021,Chicken Varuval,r022,Kongu style chicken fry.,Main Course,Non-Veg,"[""chicken"",""spices"",""onion""]",main_course,Tamil Nadu,Low
+f037,Egg Kalakki,r022,Runny beaten egg specialty.,Egg,Egg,"[""egg"",""pepper"",""salt""]",side_dish,Tamil Nadu,Low
+f037,Egg Kalakki,r022,Masala egg kalakki variant.,Egg,Egg,"[""egg"",""spices""]",side_dish,Tamil Nadu,Low
+f038,Boiled Egg,r022,Hard boiled egg.,Egg,Egg,"[""egg""]",side_dish,India,Low
+f038,Boiled Egg,r022,Half / full boil eggs.,Egg,Egg,"[""egg""]",side_dish,India,Low
+f039,Fried Egg,r022,Fried egg.,Egg,Egg,"[""egg"",""oil"",""pepper""]",side_dish,India,Low
+f035,Egg Poriyal,r022,Egg scrambled with spices.,Egg,Egg,"[""egg"",""onion"",""chilli""]",side_dish,South India,Low
+f036,Omelette,r022,Masala omelette.,Egg,Egg,"[""egg"",""onion"",""chilli""]",side_dish,India,Low
+f014,Chicken Biryani,r023,Traditional chicken biryani.,Biryani,Non-Veg,"[""rice"",""chicken"",""spices"",""ghee""]",main_course,Tamil Nadu,Low
+f015,Egg Biryani,r023,Egg biryani.,Biryani,Egg,"[""rice"",""egg"",""spices""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r023,Kuska biryani rice.,Biryani,Veg,"[""rice"",""spices"",""ghee""]",main_course,Tamil Nadu,Low
+f017,Chilli Chicken,r023,Spicy Indo-Chinese chicken.,Starter,Non-Veg,"[""chicken"",""chilli"",""garlic"",""soy sauce""]",starter,India,Low
+f021,Chicken Varuval,r023,Chicken fry / sukka.,Main Course,Non-Veg,"[""chicken"",""spices"",""onion""]",main_course,Tamil Nadu,Low
+f019,Chicken Manchurian,r023,Indo-Chinese chicken dish.,Starter,Non-Veg,"[""chicken"",""soy sauce"",""garlic""]",starter,India,Low
+f020,Pepper Chicken,r023,Pepper-flavoured chicken fry.,Starter,Non-Veg,"[""chicken"",""pepper"",""garlic""]",main_course,Tamil Nadu,Low
+f021,Chicken Varuval,r023,Chettinad chicken variant.,Main Course,Non-Veg,"[""chicken"",""spices"",""onion""]",main_course,Tamil Nadu,Low
+f020,Pepper Chicken,r023,Garlic chicken variant.,Starter,Non-Veg,"[""chicken"",""garlic"",""pepper""]",main_course,Tamil Nadu,Low
+f035,Egg Poriyal,r023,Egg masala fry.,Egg,Egg,"[""egg"",""onion"",""spices""]",side_dish,South India,Low
+f036,Omelette,r023,Egg bhurji (scramble).,Egg,Egg,"[""egg"",""onion"",""chilli""]",side_dish,India,Low
+f029,Parotta,r023,Flaky layered parotta.,Bread,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f027,Chapathi,r023,Wheat chapathi.,Bread,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f001,Veg Fried Rice,r023,Vegetable fried rice.,Fried Rice,Veg,"[""rice"",""vegetables"",""soy sauce""]",main_course,India,Low
+f002,Egg Fried Rice,r023,Fried rice with egg.,Fried Rice,Egg,"[""rice"",""egg"",""soy sauce""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r023,Chicken fried rice variant.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce""]",main_course,India,Low
+f016,Plain Biryani,r024,Veg biryani / kuska.,Biryani,Veg,"[""rice"",""ghee"",""spices""]",main_course,South India,Low
+f015,Egg Biryani,r024,Egg biryani.,Biryani,Egg,"[""rice"",""egg"",""spices""]",main_course,Tamil Nadu,Low
+f014,Chicken Biryani,r024,Chicken biryani.,Biryani,Non-Veg,"[""rice"",""chicken"",""spices""]",main_course,Tamil Nadu,Low
+f014,Chicken Biryani,r024,Chicken biryani half.,Biryani,Non-Veg,"[""rice"",""chicken"",""spices""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r024,Plain biryani rice.,Biryani,Veg,"[""rice"",""ghee"",""spices""]",main_course,South India,Low
+f038,Boiled Egg,r024,Half/Full boil egg.,Egg,Egg,"[""egg""]",side_dish,India,Low
+f039,Fried Egg,r024,Fried egg.,Egg,Egg,"[""egg"",""oil"",""pepper""]",side_dish,India,Low
+f035,Egg Poriyal,r024,Egg masala fry.,Egg,Egg,"[""egg"",""onion"",""spices""]",side_dish,South India,Low
+f035,Egg Poriyal,r024,Egg poriyal.,Egg,Egg,"[""egg"",""onion"",""spices""]",side_dish,South India,Low
+f020,Pepper Chicken,r024,Pepper chicken fry.,Starter,Non-Veg,"[""chicken"",""pepper"",""garlic""]",main_course,Tamil Nadu,Low
+f018,Chicken 65,r024,Spicy fried chicken.,Starter,Non-Veg,"[""chicken"",""curd"",""chilli""]",starter,Tamil Nadu,Low
+f019,Chicken Manchurian,r024,Indo-Chinese chicken.,Starter,Non-Veg,"[""chicken"",""garlic"",""soy sauce""]",starter,India,Low
+f021,Chicken Varuval,r024,Kongu style chicken fry.,Main Course,Non-Veg,"[""chicken"",""spices"",""onion""]",main_course,Tamil Nadu,Low
+f020,Pepper Chicken,r024,Peri peri chicken variant.,Main Course,Non-Veg,"[""chicken"",""pepper"",""chili""]",main_course,India,Low
+f018,Chicken 65,r024,Boneless 65 variant.,Starter,Non-Veg,"[""chicken"",""spices""]",starter,South India,Low
+f021,Chicken Varuval,r024,Chicken chinthamani variant.,Main Course,Non-Veg,"[""chicken"",""spices"",""onion""]",main_course,Tamil Nadu,Low
+f022,Gobi 65,r024,Fried gobi 65.,Starter,Veg,"[""cauliflower"",""spices"",""oil""]",starter,India,Low
+f023,Gobi Manchurian,r024,Gobi manchurian.,Starter,Veg,"[""cauliflower"",""garlic"",""soy sauce""]",starter,India,Low
+f024,Paneer 65,r024,Paneer 65.,Starter,Veg,"[""paneer"",""spices""]",starter,India,Low
+f025,Paneer Manchurian,r024,Paneer manchurian.,Starter,Veg,"[""paneer"",""soy sauce"",""garlic""]",starter,India,Low
+f026,Mushroom Manchurian,r024,Mushroom manchurian.,Starter,Veg,"[""mushroom"",""soy sauce"",""garlic""]",starter,India,Low
+f014,Chicken Biryani,r025,Chicken biryani.,Biryani,Non-Veg,"[""rice"",""chicken"",""spices""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r025,Plain biryani.,Biryani,Veg,"[""rice"",""spices"",""ghee""]",main_course,South India,Low
+f015,Egg Biryani,r025,Egg biryani.,Biryani,Egg,"[""rice"",""egg"",""spices""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r025,Veg biryani variant.,Biryani,Veg,"[""rice"",""vegetables"",""spices""]",main_course,India,Low
+f004,Mushroom Fried Rice,r025,Mushroom biryani style.,Fried Rice,Veg,"[""rice"",""mushroom"",""spices""]",main_course,India,Low
+f018,Chicken 65,r025,Chicken 65.,Starter,Non-Veg,"[""chicken"",""spices""]",starter,Tamil Nadu,Low
+f017,Chilli Chicken,r025,Chilli chicken.,Starter,Non-Veg,"[""chicken"",""chilli""]",starter,India,Low
+f019,Chicken Manchurian,r025,Manchurian chicken.,Starter,Non-Veg,"[""chicken"",""soy sauce""]",starter,India,Low
+f020,Pepper Chicken,r025,Pepper chicken fry.,Starter,Non-Veg,"[""chicken"",""pepper""]",main_course,Tamil Nadu,Low
+f021,Chicken Varuval,r025,Chicken varuval.,Main Course,Non-Veg,"[""chicken"",""spices""]",main_course,Tamil Nadu,Low
+f019,Chicken Manchurian,r025,Dragon chicken variant.,Starter,Non-Veg,"[""chicken"",""garlic"",""chilli""]",starter,India,Low
+f021,Chicken Varuval,r025,Chicken monica variant.,Main Course,Non-Veg,"[""chicken"",""spices""]",main_course,Tamil Nadu,Low
+f023,Gobi Manchurian,r025,Gobi chilly / manchurian.,Starter,Veg,"[""cauliflower"",""spices""]",starter,India,Low
+f025,Paneer Manchurian,r025,Paneer manchurian.,Starter,Veg,"[""paneer"",""soy sauce""]",starter,India,Low
+f026,Mushroom Manchurian,r025,Mushroom pepper variant.,Starter,Veg,"[""mushroom"",""pepper""]",starter,India,Low
+f035,Egg Poriyal,r025,Egg roast.,Egg,Egg,"[""egg"",""spices""]",side_dish,South India,Low
+f036,Omelette,r025,Omlette / bhurji.,Egg,Egg,"[""egg"",""onion""]",side_dish,India,Low
+f038,Boiled Egg,r025,Boiled eggs.,Egg,Egg,"[""egg""]",side_dish,India,Low
+f026,Small Onion Uttapam,r025,Egg dosa variant.,Tiffin,Egg,"[""egg"",""batter""]",tiffin,Tamil Nadu,Low
+f001,Veg Fried Rice,r025,Veg fried rice.,Fried Rice,Veg,"[""rice"",""vegetables""]",main_course,India,Low
+f005,Paneer Rice,r025,Paneer fried rice.,Fried Rice,Veg,"[""rice"",""paneer""]",main_course,India,Low
+f004,Mushroom Fried Rice,r025,Mushroom fried rice.,Fried Rice,Veg,"[""rice"",""mushroom""]",main_course,India,Low
+f009,Schezwan Veg Fried Rice,r025,Schezwan veg fried rice.,Fried Rice,Veg,"[""rice"",""schezwan""]",main_course,India,Low
+f002,Egg Fried Rice,r025,Egg fried rice.,Fried Rice,Egg,"[""rice"",""egg""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r025,Chicken fried rice.,Fried Rice,Non-Veg,"[""rice"",""chicken""]",main_course,India,Low
+f031,Bun Parotta,r025,Bun parotta.,Bread,Veg,"[""maida"",""oil""]",bread,Tamil Nadu,Low
+f027,Chapathi,r025,Chapathi.,Bread,Veg,"[""wheat flour""]",bread,India,Low
+f033,Egg Kothu Parotta,r025,Egg kothu parotta.,Parotta,Egg,"[""parotta"",""egg""]",parotta,Tamil Nadu,Low
+f023,Roast,r025,Kal dosa.,Tiffin,Veg,"[""rice"",""urad dal""]",tiffin,Tamil Nadu,Low
+f023,Roast,r025,Plain roast / uttapam.,Tiffin,Veg,"[""rice batter""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r025,Onion roast / uttapam.,Tiffin,Veg,"[""rice batter"",""onion""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r025,Ghee roast.,Tiffin,Veg,"[""rice batter"",""ghee""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r025,Tomato uthappam.,Tiffin,Veg,"[""rice batter"",""tomato""]",tiffin,Tamil Nadu,Low
+f020,Pepper Chicken,r026,Peri peri chicken style grilled.,Starter,Non-Veg,"[""chicken"",""pepper"",""spices""]",grill,India,Low
+f018,Chicken Lollipop,r026,Crispy fried chicken burger variant.,Starter,Non-Veg,"[""chicken"",""spices"",""oil""]",fried,India,Low
+f040,Chicken Sandwich,r026,Pulled chicken burger variant.,Snack,Non-Veg,"[""bread"",""chicken"",""sauce""]",sandwich,India,Low
+f041,Chicken Roll,r026,Chicken burrito variant wrap.,Street Food,Non-Veg,"[""tortilla"",""chicken"",""spices""]",wrap,India,Low
+f042,Veg Roll,r026,Veg burrito variant wrap.,Street Food,Veg,"[""vegetables"",""wrap"",""sauce""]",wrap,India,Low
+f014,Chicken Biryani,r027,Traditional spiced chicken biryani cooked with basmati rice,Biryani,Non-Veg,"[""chicken"",""rice"",""spices"",""ghee""]",main_course,Tamil Nadu,Low
+f013,Mutton Biryani,r027,Flavorful biryani made with tender mutton pieces,Biryani,Non-Veg,"[""mutton"",""rice"",""spices"",""ghee""]",main_course,Tamil Nadu,Low
+f015,Egg Biryani,r027,Biryani cooked with boiled eggs and spices,Biryani,Egg,"[""egg"",""rice"",""spices""]",main_course,South India,Low
+f016,Plain Biryani,r027,Spiced biryani rice without meat (kuska),Biryani,Veg,"[""rice"",""spices"",""ghee""]",main_course,Tamil Nadu,Low
+f001,Veg Fried Rice,r027,Stir-fried rice with vegetables,Fried Rice,Veg,"[""rice"",""vegetables"",""soy sauce""]",main_course,India,Low
+f004,Mushroom Fried Rice,r027,Fried rice with sautéed mushrooms,Fried Rice,Veg,"[""rice"",""mushroom"",""soy sauce"",""spices""]",main_course,India,Low
+f003,Paneer Fried Rice,r027,Paneer cubes tossed with rice and spices,Fried Rice,Veg,"[""rice"",""paneer"",""soy sauce"",""spices""]",main_course,India,Low
+f002,Egg Fried Rice,r027,Fried rice cooked with scrambled eggs,Fried Rice,Egg,"[""rice"",""egg"",""soy sauce"",""pepper""]",main_course,India,Low
+f010,Chicken Fried Rice,r027,Indo-Chinese style fried rice with chicken,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""pepper""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r027,Spicy Schezwan chicken fried rice,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce""]",main_course,India,Low
+f005,Schezwan Veg Fried Rice,r027,Spicy Schezwan vegetable rice,Fried Rice,Veg,"[""rice"",""vegetables"",""schezwan sauce""]",main_course,India,Low
+f018,Chicken 65,r027,Deep-fried spiced chicken bites,Starter,Non-Veg,"[""chicken"",""chilli"",""curd"",""spices""]",starter,South India,Low
+f017,Chilli Chicken,r027,Indo-Chinese chicken with chilli & soy sauce,Starter,Non-Veg,"[""chicken"",""chilli"",""soy sauce"",""garlic""]",starter,India,Low
+f019,Chicken Manchurian,r027,Fried chicken tossed in Manchurian sauce,Starter,Non-Veg,"[""chicken"",""soy sauce"",""garlic"",""corn flour""]",starter,India,Low
+f020,Pepper Chicken,r027,Chicken cooked with pepper and spices,Main Course,Non-Veg,"[""chicken"",""pepper"",""curry leaves"",""spices""]",main_course,Tamil Nadu,Low
+f021,Chicken Varuval,r027,Kongu style dry chicken fry,Main Course,Non-Veg,"[""chicken"",""onion"",""spices""]",main_course,Tamil Nadu,Low
+f022,Pallipalayam Chicken,r027,Tamil Pallipalayam style chicken fry,Main Course,Non-Veg,"[""chicken"",""coconut bits"",""chilli"",""spices""]",main_course,Tamil Nadu,Low
+f023,Honey Chicken,r027,Fried chicken glazed with honey,Starter,Non-Veg,"[""chicken"",""honey"",""soy sauce""]",starter,India,Low
+f024,Kadai Chicken,r027,Chicken cooked in kadai masala,Main Course,Non-Veg,"[""chicken"",""tomato"",""spices"",""onion""]",main_course,India,Low
+f029,Parotta,r027,Layered flaky wheat flatbread,Bread,Veg,"[""maida"",""oil"",""water""]",bread,Tamil Nadu,Low
+f027,Chapathi,r027,Soft wheat flatbread,Bread,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f028,Kothu Parotta,r027,Shredded parotta tossed with eggs & spices,Street Food,Egg,"[""parotta"",""egg"",""onion"",""masala""]",street_food,Tamil Nadu,Low
+f030,Gobi Manchurian,r027,Crispy cauliflower tossed in Manchurian sauce,Starter,Veg,"[""cauliflower"",""soy sauce"",""garlic""]",starter,India,Low
+f031,Paneer Manchurian,r027,Paneer tossed in Indo-Chinese sauce,Starter,Veg,"[""paneer"",""soy sauce"",""garlic""]",starter,India,Low
+f032,Mushroom Manchurian,r027,Mushrooms tossed in Manchurian sauce,Starter,Veg,"[""mushroom"",""soy sauce"",""chilli""]",starter,India,Low
+f035,Egg Poriyal,r027,South-Indian style egg fry,Side,Egg,"[""egg"",""onion"",""spices""]",side_dish,South India,Low
+f014,Chicken Biryani,r028,Traditional chicken biryani cooked with long-grain rice,Biryani,Non-Veg,"[""rice"",""chicken"",""spices"",""ghee""]",main_course,Tamil Nadu,Low
+f013,Mutton Biryani,r028,Mutton biryani with aromatic spices,Biryani,Non-Veg,"[""mutton"",""rice"",""spices"",""ghee""]",main_course,Tamil Nadu,Low
+f015,Egg Biryani,r028,Aromatic biryani layered with eggs,Biryani,Egg,"[""rice"",""egg"",""spices""]",main_course,South India,Low
+f016,Plain Biryani,r028,Plain biryani rice (kuska),Biryani,Veg,"[""rice"",""spices""]",main_course,Tamil Nadu,Low
+f018,Chicken 65,r028,Deep-fried chicken bites tossed in spices,Starter,Non-Veg,"[""chicken"",""curd"",""spices"",""fried""]",starter,Tamil Nadu,Low
+f018,Chicken 65 (Boneless),r028,Boneless spicy fried chicken,Starter,Non-Veg,"[""chicken"",""spices""]",starter,South India,Low
+f018,Chicken 65 (Bone),r028,Bone-in spicy fried chicken,Starter,Non-Veg,"[""chicken"",""spices""]",starter,South India,Low
+f017,Chilli Chicken,r028,Spicy Indo-Chinese chilli chicken,Starter,Non-Veg,"[""chicken"",""chilli"",""soy sauce""]",starter,India,Low
+f019,Chicken Manchurian,r028,Fried chicken tossed in Manchurian sauce,Starter,Non-Veg,"[""chicken"",""soy sauce"",""garlic""]",starter,India,Low
+f018,Chicken Lollipop,r028,Marinated deep-fried chicken lollipop,Starter,Non-Veg,"[""chicken"",""flour"",""spices""]",starter,India,Low
+f020,Pepper Chicken,r028,Chicken sautéed with pepper and curry leaves,Main Course,Non-Veg,"[""chicken"",""pepper"",""garlic""]",main_course,Tamil Nadu,Low
+f022,Pallipalayam Chicken,r028,Kongu style chicken fry with coconut bits,Main Course,Non-Veg,"[""chicken"",""coconut"",""chilli""]",main_course,Tamil Nadu,Low
+f023,Honey Chicken,r028,Sweet and spicy fried honey chicken,Starter,Non-Veg,"[""chicken"",""honey"",""soy sauce""]",starter,India,Low
+f024,Kadai Chicken,r028,Spicy tomato-based chicken masala,Main Course,Non-Veg,"[""chicken"",""capsicum"",""onion""]",main_course,India,Low
+f021,Chicken Varuval,r028,Tamil village style dry chicken roast,Main Course,Non-Veg,"[""chicken"",""onion"",""spices""]",main_course,Tamil Nadu,Low
+f027,Chapathi,r028,Soft wheat flatbread,Bread,Veg,"[""wheat flour"",""water""]",bread,India,Low
+f029,Parotta,r028,Layered south indian flatbread,Bread,Veg,"[""maida"",""oil""]",bread,Tamil Nadu,Low
+f028,Kothu Parotta,r028,Chopped parotta mixed with egg & masala,Street Food,Egg,"[""parotta"",""egg"",""masala""]",street_food,Tamil Nadu,Low
+f001,Veg Fried Rice,r028,Fried rice with vegetables,Fried Rice,Veg,"[""rice"",""vegetables"",""soy sauce""]",main_course,India,Low
+f003,Paneer Fried Rice,r028,Paneer mixed fried rice,Fried Rice,Veg,"[""rice"",""paneer""]",main_course,India,Low
+f004,Mushroom Fried Rice,r028,Fried rice with sautéed mushrooms,Fried Rice,Veg,"[""rice"",""mushroom""]",main_course,India,Low
+f002,Egg Fried Rice,r028,Fried rice stir fried with egg,Fried Rice,Egg,"[""rice"",""egg""]",main_course,India,Low
+f010,Chicken Fried Rice,r028,Fried rice with chicken and soy sauce,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r028,Spicy Schezwan chicken fried rice,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce""]",main_course,India,Low
+f005,Schezwan Veg Fried Rice,r028,Spicy vegetable fried rice,Fried Rice,Veg,"[""rice"",""vegetables"",""schezwan sauce""]",main_course,India,Low
+f035,Egg Masala,r028,Masala coated eggs,Egg,Egg,"[""egg"",""onion"",""spices""]",side_dish,South India,Low
+f036,Omelette,r028,Plain omelette made with eggs,Egg,Egg,"[""egg"",""salt"",""pepper""]",side_dish,India,Low
+f037,Boiled Egg,r028,Boiled eggs,Egg,Egg,"[""egg"",""water""]",side_dish,India,Low
+f001,Veg Fried Rice,r029,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f004,Mushroom Fried Rice,r029,Veg fried rice variation with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r029,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f012,Steamed Rice,r029,Plain boiled rice.,Rice,Veg,"[""rice"",""water""]",side_dish,India,Low
+f006,Jeera Rice,r029,Fragrant rice tempered with cumin seeds and ghee.,Rice,Veg,"[""rice"",""cumin"",""ghee"",""salt""]",side_dish,North India,Low
+f028,Phulka,r029,Soft puffed chapathi.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f027,Chapathi,r029,Whole wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f015,Egg Biryani,r009,Biryani rice cooked with boiled eggs and spices.,Biryani,Non-Veg,"[""rice"",""egg"",""masala""]",main_course,India,Low
+f001,Veg Fried Rice,r009,Stir-fried rice with vegetables.,Fried Rice,Veg,"[""rice"",""vegetables"",""spring onion""]",main_course,South India,Low
+f002,Egg Fried Rice,r009,Fried rice tossed with scrambled eggs.,Fried Rice,Non-Veg,"[""rice"",""egg"",""spring onion""]",main_course,India,Low
+f003,Chicken Fried Rice,r009,Fried rice with chicken pieces.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""spring onion""]",main_course,India,Low
+f008,Ghee Rice,r009,Aromatic rice cooked with ghee.,Rice,Veg,"[""rice"",""ghee"",""spices""]",side_dish,South India,Low
+f004,Mushroom Fried Rice,r009,Fried rice with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion""]",main_course,South India,Low
+f011,Schezwan Chicken Fried Rice,r009,Spicy Schezwan chicken fried rice.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce""]",main_course,India,Low
+f020,Veg Noodles,r009,Stir-fried noodles with vegetables.,Noodles,Veg,"[""noodles"",""vegetables"",""soy sauce""]",main_course,India,Low
+f019,Egg Noodles,r009,Noodles cooked with scrambled eggs.,Noodles,Non-Veg,"[""noodles"",""egg"",""spring onion""]",main_course,India,Low
+f024,Chicken Noodles,r009,Noodles fried with chicken.,Noodles,Non-Veg,"[""noodles"",""chicken"",""soy sauce""]",main_course,India,Low
+f029,Roti,r009,Whole wheat flatbread.,Breads,Veg,"[""wheat flour"",""water""]",bread,India,Low
+f045,Naan,r009,Soft tandoor-baked flatbread.,Breads,Veg,"[""maida"",""yeast"",""salt""]",bread,North India,Low
+f046,Butter Naan,r009,Naan brushed with butter.,Breads,Veg,"[""maida"",""butter""]",bread,North India,Low
+f047,Kulcha,r009,Soft wheat flour kulcha.,Breads,Veg,"[""maida"",""curd"",""salt""]",bread,Punjab,Low
+f021,Dosa,r030,South Indian crepe made from fermented batter.,Tiffin,Veg,"[""rice"",""urad dal"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f023,Roast,r030,Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f022,Egg Dosa,r030,Dosa topped with beaten egg and pepper.,Tiffin,Egg,"[""rice batter"",""egg"",""pepper"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r030,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f036,Omelette,r030,Egg cooked flat with onion & pepper.,Egg Dishes,Egg,"[""egg"",""onion"",""pepper"",""salt"",""oil""]",side_dish,India,Low
+f029,Parotta,r030,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f034,Egg Veechu Parotta,r030,Veechu parotta layered with beaten egg.,Parotta & Breads,Egg,"[""maida"",""egg"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f037,Kalaki,r030,Soft runny omelette.,Egg Dishes,Egg,"[""egg"",""pepper"",""salt"",""oil""]",side_dish,Tamil Nadu,Low
+f014,Chicken Biryani,r030,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r030,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r030,Spiced biryani rice without any meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""curd"",""mint"",""coriander"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f040,Curd Rice,r030,Rice mixed with curd and tempered.,Curd / Rice Items,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f014,Chicken Biryani,r031,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r031,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r031,Spiced biryani rice without any meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""curd"",""mint"",""coriander"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f001,Veg Fried Rice,r031,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f002,Egg Fried Rice,r031,Fried rice cooked with scrambled egg and spices.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f003,Chicken Fried Rice,r031,Fried rice with shredded chicken and mild Indo-Chinese seasoning.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Moderate
+f004,Mushroom Fried Rice,r031,Veg fried rice variation with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f029,Parotta,r031,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f036,Omelette,r031,Egg cooked flat with onion & pepper.,Egg Dishes,Egg,"[""egg"",""onion"",""pepper"",""salt"",""oil""]",side_dish,India,Low
+f037,Kalaki,r031,Soft runny omelette.,Egg Dishes,Egg,"[""egg"",""pepper"",""salt"",""oil""]",side_dish,Tamil Nadu,Low
+f014,Chicken Biryani,r032,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r032,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r032,Spiced biryani rice without any meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""curd"",""mint"",""coriander"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f036,Omelette,r032,Egg cooked flat with onion & pepper.,Egg Dishes,Egg,"[""egg"",""onion"",""pepper"",""salt"",""oil""]",side_dish,India,Low
+f037,Kalaki,r032,Soft runny omelette.,Egg Dishes,Egg,"[""egg"",""pepper"",""salt"",""oil""]",side_dish,Tamil Nadu,Low
+f035,Egg Poriyal,r032,Stir-fried egg with onions and spices.,Egg Dishes,Egg,"[""egg"",""onion"",""curry leaves"",""mustard"",""pepper"",""salt"",""oil""]",side_dish,Tamil Nadu,Low
+f029,Parotta,r032,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f032,Veechu Parotta,r032,Thin stretched parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f034,Egg Veechu Parotta,r032,Veechu parotta layered with beaten egg.,Parotta & Breads,Egg,"[""maida"",""egg"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f033,Egg Kothu Parotta,r032,Minced parotta scrambled with egg and salna.,Parotta & Breads,Egg,"[""parotta"",""egg"",""onion"",""salna"",""chili powder"",""oil"",""salt""]",kothu,Tamil Nadu,Low
+f021,Dosa,r032,Fermented rice-lentil crepe.,Tiffin,Veg,"[""rice"",""urad dal"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f023,Roast,r032,Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r032,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f022,Egg Dosa,r032,Dosa topped with beaten egg.,Tiffin,Egg,"[""rice batter"",""egg"",""pepper"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f008,Ghee Rice,r032,Fragrant rice cooked with ghee.,Rice,Veg,"[""rice"",""ghee"",""curry leaves"",""cloves"",""salt""]",main_course,South India,Low
+f006,Jeera Rice,r032,Rice tempered with cumin.,Rice,Veg,"[""rice"",""jeera"",""ghee"",""salt""]",main_course,India,Low
+f001,Veg Fried Rice,r032,Stir-fried long grain rice with vegetables.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Low
+f002,Egg Fried Rice,r032,Fried rice cooked with egg.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f003,Chicken Fried Rice,r032,Fried rice with shredded chicken.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f004,Mushroom Fried Rice,r032,Fried rice with mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r032,Spicy Indo-Chinese fried rice.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f010,Schezwan Egg Fried Rice,r032,Fried rice with egg & schezwan sauce.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r032,Fried rice with chicken and schezwan.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f001,Veg Fried Rice,r033,Stir-fried rice with vegetables.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""salt"",""oil""]",main_course,South India,Low
+f002,Egg Fried Rice,r033,Fried rice with scrambled egg.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""salt"",""oil""]",main_course,South India,Low
+f003,Chicken Fried Rice,r033,Fried rice with shredded chicken.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""spring onion"",""soy sauce"",""pepper"",""salt"",""oil""]",main_course,South India,Low
+f004,Mushroom Fried Rice,r033,Fried rice with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""soy sauce"",""spring onion"",""salt"",""oil""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r033,Spicy fried rice with schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f010,Schezwan Egg Fried Rice,r033,Schezwan fried rice with egg.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r033,Schezwan fried rice with chicken.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f014,Chicken Biryani,r033,Tamil Nadu style biryani with jeeraga samba.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""masala"",""ghee"",""curd"",""mint"",""coriander"",""oil""]",main_course,Tamil Nadu,Low
+f015,Egg Biryani,r033,Biryani made with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""masala"",""mint"",""curd"",""oil""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r033,Spiced biryani rice without meat/egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""masala"",""curd"",""mint"",""oil""]",main_course,Tamil Nadu,Low
+f027,Chappati,r033,Soft whole wheat flatbread.,Roti,Veg,"[""wheat flour"",""water"",""salt""]",roti,India,Low
+f029,Parotta,r033,Flaky layered parotta.,Parotta,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f030,Nool Parotta,r033,String parotta.,Parotta,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f031,Bun Parotta,r033,Thick fluffy parotta.,Parotta,Veg,"[""maida"",""oil"",""water"",""salt""]",parotta,Tamil Nadu,Low
+f032,Veechu Parotta,r033,Thin stretched parotta.,Parotta,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f033,Egg Kothu Parotta,r033,Minced parotta scrambled with egg.,Parotta,Egg,"[""parotta"",""egg"",""onion"",""salna"",""spices""]",kothu,Tamil Nadu,Low
+f034,Egg Veechu Parotta,r033,Veechu parotta with egg layer.,Parotta,Egg,"[""maida"",""egg"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f040,Curd Rice,r033,Tempered curd mixed with rice.,Rice,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f041,Special Curd Rice,r033,Curd rice with fruits & seasoning.,Rice,Veg,"[""rice"",""curd"",""pomegranate"",""grapes"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f001,Veg Fried Rice,r034,Stir-fried rice with vegetables.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""salt"",""oil""]",main_course,South India,Low
+f002,Egg Fried Rice,r034,Fried rice with egg.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""salt"",""oil""]",main_course,South India,Low
+f003,Chicken Fried Rice,r034,Fried rice with shredded chicken.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""salt"",""oil""]",main_course,South India,Low
+f004,Mushroom Fried Rice,r034,Fried rice with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""soy sauce"",""spring onion"",""salt"",""oil""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r034,Spicy fried rice with schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f010,Schezwan Egg Fried Rice,r034,Schezwan fried rice with egg.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f011,Schezwan Chicken Fried Rice,r034,Schezwan fried rice with chicken.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f014,Chicken Biryani,r034,Classic biryani with chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""masala"",""onion"",""tomato"",""mint"",""coriander"",""oil"",""ghee""]",main_course,Tamil Nadu,Low
+f015,Egg Biryani,r034,Biryani with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""masala"",""onion"",""tomato"",""mint"",""oil""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r034,Spiced biryani rice without egg/meat.,Biryani,Veg,"[""jeeraga samba rice"",""masala"",""onion"",""tomato"",""mint"",""oil""]",main_course,Tamil Nadu,Low
+f006,Jeera Rice,r034,Basmati rice tempered with cumin.,Rice,Veg,"[""rice"",""cumin"",""ghee"",""salt""]",side_dish,India,Low
+f008,Ghee Rice,r034,Fragrant rice flavored with ghee.,Rice,Veg,"[""rice"",""ghee"",""cloves"",""cinnamon"",""salt""]",main_course,South India,Low
+f012,Steamed Rice,r034,Plain steamed rice.,Rice,Veg,"[""rice"",""water"",""salt""]",basic,India,Low
+f027,Chapathi,r034,Whole wheat flatbread.,Roti,Veg,"[""wheat flour"",""water"",""salt""]",roti,India,Low
+f029,Parotta,r034,Flaky layered parotta.,Parotta,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f001,Veg Fried Rice,r035,Stir-fried rice with vegetables.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Low
+f002,Egg Fried Rice,r035,Fried rice with egg.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""salt"",""oil""]",main_course,South India,Low
+f003,Chicken Fried Rice,r035,Fried rice with shredded chicken.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""salt"",""oil""]",main_course,South India,Low
+f004,Mushroom Fried Rice,r035,Fried rice with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""soy sauce"",""spring onion"",""salt"",""oil""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r035,Spicy fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f010,Schezwan Egg Fried Rice,r035,Schezwan style fried rice with egg.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f011,Schezwan Chicken Fried Rice,r035,Schezwan fried rice with chicken.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f014,Chicken Biryani,r035,Traditional biryani made with chicken and aromatic spices.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""masala"",""onion"",""tomato"",""mint"",""coriander"",""oil"",""ghee""]",main_course,Tamil Nadu,Low
+f015,Egg Biryani,r035,Biryani with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""masala"",""onion"",""tomato"",""mint"",""oil""]",main_course,Tamil Nadu,Low
+f014,Chicken Biryani,r036,Traditional biryani with chicken and spices.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""masala"",""onion"",""tomato"",""mint"",""coriander"",""oil"",""ghee""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r036,Spiced biryani rice with no meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""masala"",""onion"",""tomato"",""mint"",""oil""]",main_course,Tamil Nadu,Low
+f008,Ghee Rice,r036,Fragrant rice cooked with ghee and mild spices.,Rice,Veg,"[""rice"",""ghee"",""cloves"",""cinnamon"",""salt""]",main_course,South India,Low
+f029,Parotta,r036,"Flaky, layered parotta made from maida.",Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f027,Chapathi,r036,Whole wheat Indian flatbread.,Roti,Veg,"[""wheat flour"",""water"",""salt""]",roti,India,Low
+f014,Chicken Biryani,r037,Traditional biryani with chicken and aromatic spices.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""masala"",""onion"",""tomato"",""mint"",""coriander"",""oil"",""ghee""]",main_course,Tamil Nadu,Low
+f015,Egg Biryani,r037,Biryani made with boiled eggs and spices.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""masala"",""onion"",""tomato"",""mint"",""oil""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r037,Spiced biryani rice without meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""masala"",""onion"",""tomato"",""mint"",""oil""]",main_course,Tamil Nadu,Low
+f003,Chicken Fried Rice,r037,Indo-Chinese fried rice with chicken.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f002,Egg Fried Rice,r037,Fried rice with scrambled egg.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""salt"",""oil""]",main_course,South India,Low
+f040,Curd Rice,r037,Curd mixed with rice and light tempering.,Rice,Veg,"[""rice"",""curd"",""mustard"",""curry leaves"",""salt""]",side_dish,South India,Low
+f008,Ghee Rice,r038,Fragrant rice cooked with ghee.,Rice,Veg,"[""rice"",""ghee"",""cloves"",""salt""]",main_course,South India,Low
+f006,Jeera Rice,r038,Rice tempered with cumin.,Rice,Veg,"[""rice"",""cumin"",""ghee"",""salt""]",main_course,India,Low
+f009,Schezwan Veg Fried Rice,r038,Spicy fried rice with schezwan sauce.,Fried Rice,Veg,"[""rice"",""schezwan sauce"",""carrot"",""capsicum"",""spring onion""]",main_course,India,Low
+f005,Paneer Rice,r038,Rice cooked with paneer cubes and spices.,Rice,Veg,"[""rice"",""paneer"",""onion"",""spices""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r038,Spicy chicken schezwan fried rice.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion""]",main_course,India,Low
+f029,Parotta,r038,Layered parotta made with maida.,Parotta,Veg,"[""maida"",""oil"",""water"",""salt""]",parotta,Tamil Nadu,Low
+f032,Veechu Parotta,r038,"Thin, stretched parotta.",Parotta,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f034,Egg Veechu Parotta,r038,Veechu parotta topped with egg.,Parotta,Egg,"[""maida"",""egg"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f014,Chicken Biryani,r038,Classic chicken biryani.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""masala""]",main_course,Tamil Nadu,Low
+f015,Egg Biryani,r038,Biryani prepared with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""masala""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r038,Spiced biryani rice without meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""masala""]",main_course,Tamil Nadu,Low
+f001,Veg Fried Rice,r039,Vegetable fried rice.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""spring onion""]",main_course,India,Low
+f004,Mushroom Fried Rice,r039,Fried rice with mushroom.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce""]",main_course,India,Low
+f007,Gobi Fried Rice,r039,Fried rice with gobi.,Fried Rice,Veg,"[""rice"",""cauliflower"",""soy sauce"",""pepper""]",main_course,India,Low
+f005,Paneer Fried Rice,r039,Fried rice with paneer cubes.,Fried Rice,Veg,"[""rice"",""paneer"",""capsicum"",""soy sauce""]",main_course,India,Low
+f010,Singapore Veg Fried Rice,r039,Spicy Singapore-style veg fried rice.,Fried Rice,Veg,"[""rice"",""vegetables"",""singapore sauce""]",main_course,Asia,Low
+f030,Chilli Parotta,r039,Chopped parotta tossed with chilli and spices.,Parotta,Veg,"[""parotta"",""onion"",""capsicum"",""chilli paste""]",parotta,Tamil Nadu,Low
+f029,Parotta,r039,Layered maida parotta.,Parotta,Veg,"[""maida"",""oil"",""water"",""salt""]",parotta,Tamil Nadu,Low
+f033,Egg Kothu Parotta,r039,Shredded parotta mixed with egg.,Parotta,Egg,"[""parotta"",""egg"",""onion"",""spices""]",parotta,Tamil Nadu,Low
+f032,Veechu Parotta,r039,Thin stretched parotta.,Parotta,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f014,Chicken Biryani,r039,Classic chicken biryani.,Biryani,Non-Veg,"[""rice"",""chicken"",""masala""]",main_course,Tamil Nadu,Low
+f015,Egg Biryani,r039,Biryani with boiled eggs.,Biryani,Egg,"[""rice"",""egg"",""masala""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r039,Spiced biryani rice without meat.,Biryani,Veg,"[""rice"",""masala""]",main_course,Tamil Nadu,Low
+f040,Curd Rice,r039,Curd mixed with rice and tempering.,Rice,Veg,"[""rice"",""curd"",""mustard"",""curry leaves""]",side_dish,South India,Low
+f001,Veg Fried Rice,r040,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f004,Mushroom Fried Rice,r040,Veg fried rice variation with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f005,Paneer Rice,r040,Rice tossed with soft paneer cubes and mild masala.,Fried Rice,Veg,"[""rice"",""paneer"",""onion"",""garam masala"",""oil"",""salt""]",main_course,India,Low
+f027,Chapathi,r040,Whole wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f028,Phulka,r040,Soft puffed chapathi.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f029,Parotta,r040,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f001,Veg Fried Rice,r041,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f004,Mushroom Fried Rice,r041,Veg fried rice variation with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f005,Paneer Rice,r041,Rice tossed with soft paneer cubes and mild masala.,Fried Rice,Veg,"[""rice"",""paneer"",""onion"",""garam masala"",""oil"",""salt""]",main_course,India,Low
+f014,Chicken Biryani,r041,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r041,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r041,Spiced biryani rice without any meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""curd"",""mint"",""coriander"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f021,Dosa,r041,South Indian crepe made from fermented batter.,Tiffin,Veg,"[""rice"",""urad dal"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f022,Egg Dosa,r041,Dosa topped with beaten egg and pepper.,Tiffin,Egg,"[""rice batter"",""egg"",""pepper"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f023,Roast,r041,Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r041,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f025,Ghee Podi Roast,r041,Dosa sprinkled with spicy podi roasted in ghee.,Tiffin,Veg,"[""rice batter"",""ghee"",""spicy podi"",""oil""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r041,Thick dosa topped with shallots.,Tiffin,Veg,"[""rice batter"",""small onion"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f027,Chapathi,r041,Whole wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f028,Phulka,r041,Soft puffed chapathi.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f029,Parotta,r041,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f035,Egg Poriyal,r041,Stir-fried scrambled egg.,Egg Dishes,Egg,"[""egg"",""onion"",""green chili"",""oil"",""salt""]",side_dish,Tamil Nadu,Low
+f036,Omelette,r041,Egg cooked flat with onion & pepper.,Egg Dishes,Egg,"[""egg"",""onion"",""pepper"",""salt"",""oil""]",side_dish,India,Low
+f037,Kalaki,r041,Soft runny omelette.,Egg Dishes,Egg,"[""egg"",""pepper"",""salt"",""oil""]",side_dish,Tamil Nadu,Low
+f038,Curd,r041,Plain curd.,Curd / Rice Items,Veg,"[""curd""]",side_dish,India,Low
+f039,Special Curd,r041,Curd mixed with coriander and seasoning.,Curd / Rice Items,Veg,"[""curd"",""coriander"",""green chili"",""salt""]",side_dish,Tamil Nadu,Low
+f040,Curd Rice,r041,Rice mixed with curd and tempered.,Curd / Rice Items,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f041,Special Curd Rice,r041,Enhanced curd rice with butter & pomegranate.,Curd / Rice Items,Veg,"[""rice"",""curd"",""butter"",""pomegranate"",""curry leaves"",""salt""]",side_dish,Tamil Nadu,Low
+f021,Dosa,r042,South Indian crepe made from fermented batter.,Tiffin,Veg,"[""rice"",""urad dal"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f036,Omelette,r042,Egg cooked flat with onion & pepper.,Egg Dishes,Egg,"[""egg"",""onion"",""pepper"",""salt"",""oil""]",side_dish,India,Low
+f038,Curd,r042,Plain curd.,Curd / Rice Items,Veg,"[""curd""]",side_dish,India,Low
+f040,Curd Rice,r042,Rice mixed with curd and tempered.,Curd / Rice Items,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f012,Steamed Rice,r042,Plain boiled rice.,Rice,Veg,"[""rice"",""water""]",side_dish,India,Low
+f014,Chicken Biryani,r042,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f029,Parotta,r042,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f023,Roast,r043,Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r043,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f027,Chapathi,r043,Whole wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f028,Phulka,r043,Soft puffed chapathi.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f029,Parotta,r043,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f040,Curd Rice,r043,Rice mixed with curd and tempered.,Curd / Rice Items,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f009,Schezwan Veg Fried Rice,r043,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f001,Veg Fried Rice,r044,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f002,Egg Fried Rice,r044,Fried rice cooked with scrambled egg and spices.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f003,Chicken Fried Rice,r044,Fried rice with shredded chicken and mild Indo-Chinese seasoning.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Moderate
+f009,Schezwan Veg Fried Rice,r044,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f010,Schezwan Egg Fried Rice,r044,Schezwan fried rice with scrambled egg.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r044,Spicy fried rice cooked with shredded chicken and Schezwan sauce.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Moderate
+f023,Roast,r044,Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r044,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f025,Ghee Podi Roast,r044,Dosa sprinkled with spicy podi roasted in ghee.,Tiffin,Veg,"[""rice batter"",""ghee"",""spicy podi"",""oil""]",tiffin,Tamil Nadu,Low
+f027,Chapathi,r044,Whole wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f028,Phulka,r044,Soft puffed chapathi.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f029,Parotta,r044,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f033,Egg Kothu Parotta,r044,Minced parotta scrambled with egg and salna.,Parotta & Breads,Egg,"[""parotta"",""egg"",""onion"",""salna"",""chili powder"",""oil"",""salt""]",kothu,Tamil Nadu,Low
+f040,Curd Rice,r044,Rice mixed with curd and tempered.,Curd / Rice Items,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f001,Veg Fried Rice,r045,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f002,Egg Fried Rice,r045,Fried rice cooked with scrambled egg and spices.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f003,Chicken Fried Rice,r045,Fried rice with shredded chicken and mild Indo-Chinese seasoning.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Moderate
+f004,Mushroom Fried Rice,r045,Veg fried rice variation with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r045,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f010,Schezwan Egg Fried Rice,r045,Schezwan fried rice with scrambled egg.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r045,Spicy fried rice cooked with shredded chicken and Schezwan sauce.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Moderate
+f012,Steamed Rice,r045,Plain boiled rice.,Rice,Veg,"[""rice"",""water""]",side_dish,India,Low
+f040,Curd Rice,r045,Rice mixed with curd and tempered.,Curd / Rice Items,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f014,Chicken Biryani,r046,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f001,Veg Fried Rice,r047,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f002,Egg Fried Rice,r047,Fried rice cooked with scrambled egg and spices.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f003,Chicken Fried Rice,r047,Fried rice with shredded chicken and mild Indo-Chinese seasoning.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Moderate
+f004,Mushroom Fried Rice,r047,Veg fried rice variation with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f005,Paneer Rice,r047,Rice tossed with soft paneer cubes and mild masala.,Fried Rice,Veg,"[""rice"",""paneer"",""onion"",""garam masala"",""oil"",""salt""]",main_course,India,Low
+f006,Jeera Rice,r047,Fragrant rice tempered with cumin seeds and ghee.,Rice,Veg,"[""rice"",""cumin"",""ghee"",""salt""]",side_dish,North India,Low
+f007,Garlic Rice,r047,Rice flavored with roasted garlic and herbs.,Rice,Veg,"[""rice"",""garlic"",""butter"",""pepper"",""salt""]",side_dish,India,Low
+f008,Ghee Rice,r047,Simple flavored rice cooked with ghee and whole spices.,Rice,Veg,"[""rice"",""ghee"",""cloves"",""cinnamon"",""bay leaf"",""salt""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r047,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f010,Schezwan Egg Fried Rice,r047,Schezwan fried rice with scrambled egg.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r047,Spicy fried rice cooked with shredded chicken and Schezwan sauce.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Moderate
+f012,Steamed Rice,r047,Plain boiled rice.,Rice,Veg,"[""rice"",""water""]",side_dish,India,Low
+f013,Special Curd Rice,r047,Curd mixed rice with seasoning.,Curd / Rice Items,Veg,"[""rice"",""curd"",""mustard"",""curry leaves"",""green chili"",""salt""]",side_dish,South India,Low
+f014,Chicken Biryani,r047,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r047,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r047,Spiced biryani rice without any meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""curd"",""mint"",""coriander"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f017,Chicken Kheema Biryani,r047,Biryani prepared using minced chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""minced chicken"",""onion"",""tomato"",""ginger garlic paste"",""green chili"",""biryani masala"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f018,Nattukozhi Biryani,r047,Village style biryani with country chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""country chicken"",""onion"",""tomato"",""ginger garlic paste"",""green chili"",""biryani masala"",""ghee"",""mint"",""coriander"",""salt""]",main_course,Tamil Nadu,Low
+f019,Arisi Paruppu Sadham,r047,Mild rice dish with dal and minimal spices.,Meals / Rice Items,Veg,"[""rice"",""toor dal"",""turmeric"",""ghee"",""mustard"",""curry leaves"",""salt""]",main_course,Tamil Nadu,Low
+f020,Non-Veg Meals,r047,Traditional Tamil meal served with rice and gravies.,Meals,Non-Veg,"[""rice"",""sambar"",""rasam"",""thanni kulambu"",""veg poriyal"",""papad"",""pickle""]",full_meal,Tamil Nadu,Low
+f021,Dosa,r047,South Indian crepe made from fermented batter.,Tiffin,Veg,"[""rice"",""urad dal"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f022,Egg Dosa,r047,Dosa topped with beaten egg and pepper.,Tiffin,Egg,"[""rice batter"",""egg"",""pepper"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f023,Roast,r047,Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r047,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f025,Ghee Podi Roast,r047,Dosa sprinkled with spicy podi roasted in ghee.,Tiffin,Veg,"[""rice batter"",""ghee"",""spicy podi"",""oil""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r047,Thick dosa topped with shallots.,Tiffin,Veg,"[""rice batter"",""small onion"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f027,Chapathi,r047,Whole wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f028,Phulka,r047,Soft puffed chapathi.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f029,Parotta,r047,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f030,Nool Parotta,r047,String-layered parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f031,Bun Parotta,r047,Thick fluffy parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f032,Veechu Parotta,r047,Thin stretched parotta.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f033,Egg Kothu Parotta,r047,Minced parotta scrambled with egg and salna.,Parotta & Breads,Egg,"[""parotta"",""egg"",""onion"",""salna"",""chili powder"",""oil"",""salt""]",kothu,Tamil Nadu,Low
+f034,Egg Veechu Parotta,r047,Veechu parotta layered with beaten egg.,Parotta & Breads,Egg,"[""maida"",""egg"",""oil"",""salt""]",parotta,Tamil Nadu,Low
+f035,Egg Poriyal,r047,Stir-fried scrambled egg.,Egg Dishes,Egg,"[""egg"",""onion"",""green chili"",""oil"",""salt""]",side_dish,Tamil Nadu,Low
+f036,Omelette,r047,Egg cooked flat with onion & pepper.,Egg Dishes,Egg,"[""egg"",""onion"",""pepper"",""salt"",""oil""]",side_dish,India,Low
+f037,Kalaki,r047,Soft runny omelette.,Egg Dishes,Egg,"[""egg"",""pepper"",""salt"",""oil""]",side_dish,Tamil Nadu,Low
+f038,Curd,r047,Plain curd.,Curd / Rice Items,Veg,"[""curd""]",side_dish,India,Low
+f039,Special Curd,r047,Curd mixed with coriander and seasoning.,Curd / Rice Items,Veg,"[""curd"",""coriander"",""green chili"",""salt""]",side_dish,Tamil Nadu,Low
+f040,Curd Rice,r047,Rice mixed with curd and tempered.,Curd / Rice Items,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f041,Special Curd Rice,r047,Enhanced curd rice with butter & pomegranate.,Curd / Rice Items,Veg,"[""rice"",""curd"",""butter"",""pomegranate"",""curry leaves"",""salt""]",side_dish,Tamil Nadu,Low
+f001,Veg Fried Rice,r048,Stir-fried long grain rice with mixed vegetables and mild seasoning.,Fried Rice,Veg,"[""rice"",""carrot"",""beans"",""peas"",""spring onion"",""soy sauce"",""oil"",""salt""]",main_course,South India,Moderate
+f002,Egg Fried Rice,r048,Fried rice cooked with scrambled egg and spices.,Fried Rice,Egg,"[""rice"",""egg"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f003,Chicken Fried Rice,r048,Fried rice with shredded chicken and mild Indo-Chinese seasoning.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""soy sauce"",""spring onion"",""pepper"",""oil"",""salt""]",main_course,South India,Moderate
+f004,Mushroom Fried Rice,r048,Veg fried rice variation with sautéed mushrooms.,Fried Rice,Veg,"[""rice"",""mushroom"",""spring onion"",""soy sauce"",""pepper"",""oil"",""salt""]",main_course,South India,Low
+f005,Paneer Rice,r048,Rice tossed with soft paneer cubes and mild masala.,Fried Rice,Veg,"[""rice"",""paneer"",""onion"",""garam masala"",""oil"",""salt""]",main_course,India,Low
+f006,Jeera Rice,r048,Fragrant rice tempered with cumin seeds and ghee.,Rice,Veg,"[""rice"",""cumin"",""ghee"",""salt""]",side_dish,North India,Low
+f008,Ghee Rice,r048,Simple flavored rice cooked with ghee and whole spices.,Rice,Veg,"[""rice"",""ghee"",""cloves"",""cinnamon"",""bay leaf"",""salt""]",main_course,South India,Low
+f009,Schezwan Veg Fried Rice,r048,Spicy Indo-Chinese fried rice with Schezwan sauce.,Fried Rice,Veg,"[""rice"",""capsicum"",""carrot"",""spring onion"",""schezwan sauce"",""soy sauce"",""oil""]",main_course,India,Low
+f010,Schezwan Egg Fried Rice,r048,Schezwan fried rice with scrambled egg.,Fried Rice,Egg,"[""rice"",""egg"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Low
+f011,Schezwan Chicken Rice,r048,Spicy fried rice cooked with shredded chicken and Schezwan sauce.,Fried Rice,Non-Veg,"[""rice"",""chicken"",""schezwan sauce"",""spring onion"",""soy sauce"",""oil""]",main_course,India,Moderate
+f012,Steamed Rice,r048,Plain boiled rice.,Rice,Veg,"[""rice"",""water""]",side_dish,India,Low
+f014,Chicken Biryani,r048,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r048,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r048,Spiced biryani rice without any meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""curd"",""mint"",""coriander"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f021,Dosa,r048,South Indian crepe made from fermented batter.,Tiffin,Veg,"[""rice"",""urad dal"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f022,Egg Dosa,r048,Dosa topped with beaten egg and pepper.,Tiffin,Egg,"[""rice batter"",""egg"",""pepper"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f023,Roast,r048,Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f024,Ghee Roast,r048,Crispy dosa roasted in ghee.,Tiffin,Veg,"[""rice"",""urad dal"",""ghee"",""salt""]",tiffin,Tamil Nadu,Low
+f025,Ghee Podi Roast,r048,Dosa sprinkled with spicy podi roasted in ghee.,Tiffin,Veg,"[""rice batter"",""ghee"",""spicy podi"",""oil""]",tiffin,Tamil Nadu,Low
+f026,Small Onion Uttapam,r048,Thick dosa topped with shallots.,Tiffin,Veg,"[""rice batter"",""small onion"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f027,Chapathi,r048,Whole wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f029,Parotta,r048,Layered flaky bread made with maida.,Parotta & Breads,Veg,"[""maida"",""oil"",""salt"",""water""]",parotta,Tamil Nadu,Low
+f035,Egg Poriyal,r048,Stir-fried scrambled egg.,Egg Dishes,Egg,"[""egg"",""onion"",""green chili"",""oil"",""salt""]",side_dish,Tamil Nadu,Low
+f036,Omelette,r048,Egg cooked flat with onion & pepper.,Egg Dishes,Egg,"[""egg"",""onion"",""pepper"",""salt"",""oil""]",side_dish,India,Low
+f037,Kalaki,r048,Soft runny omelette.,Egg Dishes,Egg,"[""egg"",""pepper"",""salt"",""oil""]",side_dish,Tamil Nadu,Low
+f038,Curd,r048,Plain curd.,Curd / Rice Items,Veg,"[""curd""]",side_dish,India,Low
+f040,Curd Rice,r048,Rice mixed with curd and tempered.,Curd / Rice Items,Veg,"[""rice"",""curd"",""curry leaves"",""mustard"",""salt""]",side_dish,South India,Low
+f021,Dosa,r049,South Indian crepe made from fermented batter.,Tiffin ,Veg,"[""rice"",""urad dal"",""salt"",""oil""]",tiffin,Tamil Nadu,Low
+f023,Roast,r049, Crispy golden dosa served large.,Tiffin,Veg,"[""rice"",""urad dal"",""oil"",""salt""]",tiffin,Tamil Nadu,Low
+f027,Chapathi,r049,Whole wheat flatbread.,Parotta & Breads,Veg,"[""wheat flour"",""water"",""salt""]",bread,India,Low
+f006,Jeera Rice,r049,Fragrant rice tempered with cumin seeds and ghee.,Rice,Veg,"[""rice"",""cumin"",""ghee"",""salt""]",side_dish,North India,Low
+f008,Ghee Rice,r049,Simple flavored rice cooked with ghee and whole spices.,Rice,Veg,"[""rice"",""ghee"",""cloves"",""cinnamon"",""bay leaf"",""salt""]",main_course,South India,Low
+f036,Omelette,r049,Egg cooked flat with onion & pepper.,Egg Dishes,Egg,"[""egg"",""onion"",""pepper"",""salt"",""oil""]",side_dish,India,Low
+f014,Chicken Biryani,r050,Tamil Nadu style biryani with jeeraga samba rice and tender chicken.,Biryani,Non-Veg,"[""jeeraga samba rice"",""chicken"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""ghee"",""curd"",""coriander"",""mint"",""oil"",""salt""]",main_course,Tamil Nadu,Moderate
+f015,Egg Biryani,r050,Fragrant biryani rice cooked with boiled eggs.,Biryani,Egg,"[""jeeraga samba rice"",""egg"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""mint"",""curd"",""oil"",""salt""]",main_course,Tamil Nadu,Low
+f016,Plain Biryani,r050,Spiced biryani rice without any meat or egg.,Biryani,Veg,"[""jeeraga samba rice"",""onion"",""tomato"",""ginger garlic paste"",""chili powder"",""biryani masala"",""curd"",""mint"",""coriander"",""oil"",""salt""]",main_course,Tamil Nadu,Low

@@ -1,170 +1,136 @@
-from models import Session, User, Food
-from recommender import hybrid_food_recommend, get_user, get_trending_foods, foods_liked_by_similar_users, get_community_suggested
-from kgensam import get_fuzzy_attributes
-from util import clean_text, build_explanation
-from config import mongo_db, CONFIG
-from groq_api import groq_chat_api
 import datetime
+import logging
+from typing import Dict, Any
 
-_session_store = {}
+from models import Session, Food
+from recommender import hybrid_food_recommend, get_user
+from kgensam import next_uncertain_attribute
+from util import clean_text
+from config import mongo_db, CONFIG
+from groq_api import groq_chat
 
-def get_or_create_session(session_id, user_id):
-    if session_id in _session_store:
-        session = _session_store[session_id]
-    else:
-        session = Session(session_id=session_id, user_id=user_id)
-        session.state["suppress_fun_fact"] = False
+logger = logging.getLogger("dialogue")
+
+_session_store: Dict[str, Session] = {}
+
+def get_session(session_id: str, user_id: str) -> Session:
+    session = _session_store.get(session_id)
+    if not session:
+        # Initialize session with necessary state variables
+        session = Session(session_id=session_id, user_id=user_id, state={
+            "asked_attributes": [],
+            "pending_question": None # This will track what the bot just asked
+        })
         _session_store[session_id] = session
+    session.last_activity = datetime.datetime.utcnow()
     return session
 
-def update_session(session, user_message, bot_reply, slots_filled=None, feedback_status=None):
-    session.dialog_history.append({"role": "user", "content": user_message})
-    session.dialog_history.append({"role": "bot", "content": bot_reply})
-    if slots_filled:
-        session.state.update(slots_filled)
-    if feedback_status is not None:
-        session.state["last_feedback"] = feedback_status
-    session.last_activity = datetime.datetime.now()
+def append_dialog(session: Session, role: str, content: str):
+    session.dialog_history.append({"role": role, "content": content})
+    if len(session.dialog_history) > CONFIG["chat_history_limit"]:
+        session.dialog_history = session.dialog_history[-CONFIG["chat_history_limit"]:]
 
-def next_clarify_attribute(session: Session, user: User) -> str:
-    already_asked = set(session.state.keys())
-    candidates = get_fuzzy_attributes(user.user_id)
-    for attr in candidates:
-        if attr not in already_asked or session.state.get(attr) in [None, "", "N/A"]:
-            return attr
-    return None
+def cleanup_sessions():
+    now = datetime.datetime.utcnow()
+    ttl = datetime.timedelta(minutes=CONFIG["session_ttl_minutes"])
+    to_delete = [sid for sid, ses in _session_store.items() if now - ses.last_activity > ttl]
+    for sid in to_delete:
+        _session_store.pop(sid, None)
 
-def _is_user_clarification(msg: str):
-    msg_lower = msg.lower()
-    return '?' in msg or any(kw in msg_lower for kw in ["what", "which", "explain", "mean", "help", "category"])
+def _get_restaurant_name(restaurant_id: str) -> str:
+    if not restaurant_id:
+        return "a local restaurant"
+    doc = mongo_db.restaurants.find_one({"restaurant_id": restaurant_id}, {"restaurant_name": 1})
+    return doc.get("restaurant_name", "a local eatery") if doc else "a local eatery"
 
-def is_meta_request(msg: str):
-    msg_lower = msg.lower()
-    return "why did you choose" in msg_lower or "why this restaurant" in msg_lower
+def _generate_conversational_recommendation(user_message: str, food: Food, context: Dict[str, Any]) -> str:
+    restaurant_name = _get_restaurant_name(food.restaurant_id)
+    reasoning_points = []
+    if context.get("trending_area"):
+        reasoning_points.append(f"It's trending in {context['trending_area']}.")
+    if context.get("collaborative"):
+        reasoning_points.append("It's similar to other dishes you've liked.")
+    if context.get("community"):
+        reasoning_points.append("It's a community-approved choice.")
+    if not reasoning_points:
+        reasoning_points.append("It's a classic choice that matches your query.")
+    reasoning_str = " ".join(reasoning_points)
 
-def is_fun_fact_request(msg: str):
-    msg_lower = msg.lower()
-    return "special" in msg_lower or "fun fact" in msg_lower or "cuisine" in msg_lower
+    prompt = f"""
+    The user's request was: "{user_message}"
+    I found this recommendation:
+    - Food: {food.food_name} at {restaurant_name}
+    - Details: It's a {food.veg_nonveg} {food.category} dish.
+    - Reason: {reasoning_str}
+    Your task: Craft a warm, conversational response recommending this dish. Weave in the details naturally. Do not just list facts. End by asking for feedback.
+    """
+    return groq_chat(prompt.strip())
 
-def fill_slot(session_id, attr, value):
-    session = _session_store[session_id]
-    session.state[attr] = value
-    session.last_activity = datetime.datetime.now()
+def _is_a_query(text: str) -> bool:
+    """Simple heuristic to check if a message is a new query."""
+    return any(kw in text for kw in ["recommend", "find", "get me", "suggest", "what about", "how about", "i want"])
 
-def get_session_history(session_id):
-    session = _session_store.get(session_id)
-    return session.dialog_history if session else []
-
-def trim_history(dialog_history, n=6):
-    filtered = [msg for msg in dialog_history if msg["content"].lower() not in ("hello", "hi", "hey")]
-    return filtered[-n:] if len(filtered) >= n else filtered
-
-def process_user_message(user_id: str, session_id: str, user_message: str) -> dict:
-    session = get_or_create_session(session_id, user_id)
+def process_message(user_id: str, session_id: str, message: str) -> Dict:
+    cleanup_sessions()
+    session = get_session(session_id, user_id)
     user = get_user(user_id)
-    cleaned = clean_text(user_message)
+    msg_clean = clean_text(message)
+    append_dialog(session, "user", message)
 
-    # Fun fact suppression logic
-    if "no fun fact" in cleaned or "don't want fun fact" in cleaned:
-        session.state["suppress_fun_fact"] = True
+    # --- Step 1: Handle pending questions (Answer processing) ---
+    pending_question = session.state.get("pending_question")
+    if pending_question and not _is_a_query(msg_clean):
+        # User is answering the bot's question
+        logger.info(f"User answered pending question '{pending_question}' with '{message}'")
+        session.state[pending_question] = message.strip()
+        session.state["pending_question"] = None # Clear the pending question
+        session.state.setdefault("asked_attributes", []).append(pending_question)
 
-    # End/quick exit
-    if "thanks" in cleaned or "bye" in cleaned:
-        reply = groq_chat_api("End session and say goodbye in a friendly way!", trim_history(session.dialog_history))
-        update_session(session, user_message, reply)
-        return {"reply": reply, "end": True}
+    # --- Step 2: Decide whether to ask a question or recommend (KGEnSam Logic) ---
+    asked_attrs = session.state.get("asked_attributes", [])
+    # Check if we still need to ask more questions
+    if len(asked_attrs) < CONFIG["max_attribute_questions"]:
+        next_attr = next_uncertain_attribute(user_id, asked_attrs)
+        if next_attr:
+            logger.info(f"KGEnSam: Next uncertain attribute is '{next_attr}'. Asking user.")
+            # Map attribute to a user-friendly question
+            question_map = {
+                "spice_level": "To find the perfect dish, what spice level do you prefer (e.g., mild, medium, spicy)?",
+                "cuisine": "Great! Are you in the mood for a specific cuisine, like South Indian, Chinese, or Arabian?",
+                "area": "Got it. To find something nearby, which area in Coimbatore are you in (e.g., Gandhipuram, Peelamedu)?",
+                "veg_nonveg": "Understood. And are you looking for Veg, Non-Veg, or Egg dishes?"
+            }
+            question_to_ask = question_map.get(next_attr, f"What about {next_attr.replace('_', ' ')}?")
+            session.state["pending_question"] = next_attr # Set the pending question
+            append_dialog(session, "bot", question_to_ask)
+            return {"reply": question_to_ask}
 
-    # Meta/explain requests
-    if is_meta_request(cleaned):
-        last_rec = session.dialog_history[-2]["content"] if len(session.dialog_history) >= 2 else ""
-        prompt = f"Explain in friendly language (no fun facts, no bold/extra formatting) why the recommended restaurant is suitable. Use recent conversation and user preferences only. Last recommendation: {last_rec}"
-        reply = groq_chat_api(prompt, trim_history(session.dialog_history))
-        update_session(session, user_message, reply)
-        return {"reply": reply}
+    # --- Step 3: If no more questions, proceed to recommendation ---
+    logger.info("Proceeding to recommendation. All required attributes gathered or limit reached.")
+    filters = {k: v for k, v in session.state.items() if k in CONFIG["active_attributes"]}
+    recs = hybrid_food_recommend(user, query=message, filters=filters, k=3)
 
-    # Fun fact request (check suppression)
-    if is_fun_fact_request(cleaned) and not session.state.get("suppress_fun_fact"):
-        cuisine = session.state.get("category", "South Indian")
-        prompt = f"Share a single, plain fun fact about {cuisine} cuisine for a food enthusiast in Coimbatore. No extra formatting/bold."
-        reply = groq_chat_api(prompt, trim_history(session.dialog_history))
-        update_session(session, user_message, reply)
-        return {"reply": reply}
+    if recs:
+        top_food = recs[0]
+        context_flags = {
+            "trending_area": filters.get("area"),
+            "collaborative": bool(user.liked_foods),
+            "community": mongo_db.community_suggestions.count_documents({"status": "approved"}) > 0
+        }
+        conversational_reply = _generate_conversational_recommendation(message, top_food, context_flags)
+        session.state["last_food_id"] = top_food.food_id
+        session.state["last_restaurant_id"] = top_food.restaurant_id
+        session.state["pending_question"] = None # Ensure no question is pending
 
-    # Slot/clarification logic
-    clarify_attr = next_clarify_attribute(session, user)
-    if clarify_attr:
-        if _is_user_clarification(user_message):
-            reply = groq_chat_api(f"User requests clarification for {clarify_attr}. Explain meaning and ask for their preferred value. Use clear, plain text.", trim_history(session.dialog_history))
-            update_session(session, user_message, reply, slots_filled={clarify_attr: None})
-            return {"reply": reply, "clarify": clarify_attr}
-        else:
-            fill_slot(session_id, clarify_attr, user_message.strip())
-            reply = groq_chat_api(f"Preference for {clarify_attr} set to '{user_message.strip()}'.", trim_history(session.dialog_history))
-            update_session(session, user_message, reply, slots_filled={clarify_attr: user_message.strip()})
-            new_clarify = next_clarify_attribute(session, user)
-            if new_clarify:
-                further_reply = groq_chat_api(f"Please clarify your preference for {new_clarify}.", trim_history(session.dialog_history))
-                update_session(session, "", further_reply, slots_filled={new_clarify: None})
-                return {"reply": f"{reply}\n{further_reply}", "clarify": new_clarify}
-
-    # ---- MAIN FOOD RECOMMENDATION LOGIC ----
-    foods = hybrid_food_recommend(user=user, query=user_message, additional_filters=session.state)
-    context = {
-        "trending_area": session.state.get("area", None),
-        "collaborative_info": True if foods_liked_by_similar_users(user_id, k=2) else False,
-        "community_suggested": True if get_community_suggested(k=1) else False,
-    }
-
-    if foods:
-        top_food = foods[0]
-        rest_doc = mongo_db.restaurants.find_one({"restaurant_id": top_food.restaurant_id})
-        rest_name = rest_doc["restaurant_name"] if rest_doc else f"Restaurant #{top_food.restaurant_id}"
-        rest_area = rest_doc.get("area", "") if rest_doc else "Unknown area"
-        explanation = build_explanation(top_food.__dict__, user, context)
-        explain_prompt = f"Give a concise explanation (no fun fact, no extra formatting) for recommending '{rest_name}' for '{top_food.food_name}' based on preferences {session.state}. Reason: {explanation}"
-        explain_reply = groq_chat_api(explain_prompt, trim_history(session.dialog_history))
-        recommendation_text = (
-            f"Based on your preferences, I recommend {top_food.food_name} at {rest_name} ({rest_area}).\n"
-            f"Reason: {explain_reply}\n"
-            "Did you like this recommendation? (Yes/No)"
-        )
-        update_session(session, user_message, recommendation_text)
-        session.state["last_rec_id"] = top_food.food_id
-        session.state["last_rest_id"] = top_food.restaurant_id
-        session.state["last_feedback"] = None
+        append_dialog(session, "bot", conversational_reply)
         return {
-            "reply": recommendation_text,
+            "reply": conversational_reply,
             "recommended_food": top_food.food_name,
             "food_id": top_food.food_id,
-            "restaurant": rest_name,
             "restaurant_id": top_food.restaurant_id,
             "request_feedback": True
         }
-
-    # ---- FALLBACK TO TRENDING IF NO FOODS MATCH ----
-    trending = get_trending_foods(area=session.state.get("area", None), k=2)
-    if trending:
-        tf = trending[0]
-        rest_doc = mongo_db.restaurants.find_one({"restaurant_id": tf.restaurant_id})
-        rest_name = rest_doc["restaurant_name"] if rest_doc else f"Restaurant #{tf.restaurant_id}"
-        recommendation_text = (
-            f"No direct match found, but trending option: {tf.food_name} at {rest_name}.\n"
-            "Did you like this recommendation? (Yes/No)"
-        )
-        update_session(session, user_message, recommendation_text)
-        session.state["last_rec_id"] = tf.food_id
-        session.state["last_rest_id"] = tf.restaurant_id
-        session.state["last_feedback"] = None
-        return {
-            "reply": recommendation_text,
-            "recommended_food": tf.food_name,
-            "food_id": tf.food_id,
-            "restaurant": rest_name,
-            "restaurant_id": tf.restaurant_id,
-            "request_feedback": True
-        }
-
-    # ---- Generic no-result fallback ----
-    reply = groq_chat_api("Sorry, I couldn't find results. Please try another cuisine or area.", trim_history(session.dialog_history))
-    update_session(session, user_message, reply)
-    return {"reply": reply}
+    else:
+        fallback_reply = "I'm sorry, I couldn't find a perfect match with those preferences. Shall we try adjusting something, perhaps the cuisine or area?"
+        append_dialog(session, "bot", fallback_reply)
+        return {"reply": fallback_reply}

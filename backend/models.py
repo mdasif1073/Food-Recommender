@@ -3,48 +3,37 @@ from typing import Optional, List, Dict, Any
 import datetime
 import uuid
 
+def iso(dt: Optional[datetime.datetime]) -> Optional[str]:
+    return dt.isoformat() if dt else None
+
 @dataclass
 class User:
-    user_id: str                      # Qdrant/Mongo UUID (NEVER email!)
-    email: str                        # For login/account reference only
+    user_id: str
+    email: str
     password_hash: str
     username: Optional[str] = None
     preferences: Dict[str, Any] = field(default_factory=dict)
     liked_foods: List[str] = field(default_factory=list)
     disliked_foods: List[str] = field(default_factory=list)
-    chat_history: List[Dict] = field(default_factory=list)
-    created_at: datetime.datetime = field(default_factory=datetime.datetime.now)
-    last_active: Optional[datetime.datetime] = None
+    created_at: datetime.datetime = field(default_factory=datetime.datetime.utcnow)
+    last_active: datetime.datetime = field(default_factory=datetime.datetime.utcnow)
 
-    # The KEY part to guarantee UUID is used every time a user is created:
     @staticmethod
     def new(email: str, password_hash: str, username: Optional[str] = None) -> "User":
-        user_uuid = str(uuid.uuid4())
-        return User(user_id=user_uuid, email=email, password_hash=password_hash, username=username)
-
+        return User(user_id=str(uuid.uuid4()), email=email, password_hash=password_hash, username=username)
 
     def to_dict(self):
         d = asdict(self)
-        d["created_at"] = d.get("created_at", datetime.datetime.now()).isoformat()
-        d["last_active"] = d.get("last_active", datetime.datetime.now()).isoformat() if d.get("last_active") else None
+        d["created_at"] = iso(self.created_at)
+        d["last_active"] = iso(self.last_active)
         return d
 
-
     @staticmethod
-    def from_dict(data):
+    def from_dict(data: Dict[str, Any]) -> "User":
         data = dict(data)
-        data.pop('_id', None)
+        data.pop("_id", None)
         return User(**data)
 
-
-    @staticmethod
-    def new(email: str, password_hash: str, username: Optional[str] = None) -> "User":
-        # Always create a unique UUID per user for all embeddings/Qdrant records/etc
-        user_uuid = str(uuid.uuid4())
-        return User(user_id=user_uuid, email=email, password_hash=password_hash, username=username)
-
-
-# --- Food model ---
 @dataclass
 class Food:
     food_id: str
@@ -57,14 +46,19 @@ class Food:
     dish_type: Optional[str] = ""
     popular_in: Optional[str] = ""
     price_level: Optional[str] = ""
-    food_rating: Optional[float] = None
-
+    spice_level: Optional[str] = ""
+    cuisine: Optional[str] = ""
+    area: Optional[str] = ""
 
     def to_dict(self):
         return asdict(self)
 
+    @staticmethod
+    def from_payload(payload: Dict[str, Any]) -> "Food":
+        payload = dict(payload)
+        payload.pop("_id", None)
+        return Food(**payload)
 
-# --- Restaurant model ---
 @dataclass
 class Restaurant:
     restaurant_id: str
@@ -74,50 +68,41 @@ class Restaurant:
     longitude: Optional[float] = None
     cuisine_types: Optional[str] = ""
     avg_rating: Optional[float] = None
-    num_reviews: Optional[int] = 0
     opening_hours: Optional[str] = ""
     contact_number: Optional[str] = ""
     delivery_available: Optional[bool] = False
-    dine_in_available: Optional[bool] = False
+    dine_in_available: Optional[bool] = True
     features: Optional[str] = ""
     restaurant_type: Optional[str] = ""
-    area: Optional[str] = ""
     price_level: Optional[str] = ""
-    image_url: Optional[str] = ""
-
+    area: Optional[str] = ""
 
     def to_dict(self):
         return asdict(self)
 
-
-# --- Session (for conversational context/state) ---
 @dataclass
 class Session:
     session_id: str
     user_id: str
-    dialog_history: List[Dict] = field(default_factory=list)  # [{role:'user/bot', content:''}]
+    dialog_history: List[Dict[str, Any]] = field(default_factory=list)
     state: Dict[str, Any] = field(default_factory=dict)
-    last_activity: datetime.datetime = field(default_factory=datetime.datetime.now)
-
+    last_activity: datetime.datetime = field(default_factory=datetime.datetime.utcnow)
 
     def to_dict(self):
         d = asdict(self)
-        d["last_activity"] = d.get("last_activity", datetime.datetime.now()).isoformat()
+        d["last_activity"] = iso(self.last_activity)
         return d
 
-
-# --- Feedback structure for analytics/mod ---
 @dataclass
 class Feedback:
-    user_id: str            # Must be UUID (never email)
+    user_id: str
     food_id: Optional[str] = None
     restaurant_id: Optional[str] = None
-    action: str = "like"    # like, dislike, suggest, report
+    action: str = "like"
     comment: Optional[str] = None
-    timestamp: datetime.datetime = field(default_factory=datetime.datetime.now)
-
+    timestamp: datetime.datetime = field(default_factory=datetime.datetime.utcnow)
 
     def to_dict(self):
         d = asdict(self)
-        d["timestamp"] = self.timestamp.isoformat()
+        d["timestamp"] = iso(self.timestamp)
         return d
